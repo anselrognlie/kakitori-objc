@@ -16,6 +16,7 @@
 		FD3B0B372427EAC8003AA2CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B362427EAC8003AA2CB /* main.m */; };
 		FD3B0B412427EAC8003AA2CB /* KakitoriTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */; };
 		FD3B0B4C2427EAC8003AA2CB /* KakitoriUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */; };
+		FD3B0B5D2427EE51003AA2CB /* EWCStrokeOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		FD3B0B472427EAC8003AA2CB /* KakitoriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakitoriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KakitoriUITests.m; sourceTree = "<group>"; };
 		FD3B0B4D2427EAC8003AA2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3B0B5B2427EE51003AA2CB /* EWCStrokeOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeOrderView.h; sourceTree = "<group>"; };
+		FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeOrderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 		FD3B0B232427EAC6003AA2CB /* Kakitori */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B0B5E2427FB2E003AA2CB /* Modules */,
+				FD3B0B592427EC47003AA2CB /* Controls */,
 				FD3B0B242427EAC6003AA2CB /* AppDelegate.h */,
 				FD3B0B252427EAC6003AA2CB /* AppDelegate.m */,
 				FD3B0B272427EAC6003AA2CB /* SceneDelegate.h */,
@@ -135,6 +140,38 @@
 				FD3B0B4D2427EAC8003AA2CB /* Info.plist */,
 			);
 			path = KakitoriUITests;
+			sourceTree = "<group>";
+		};
+		FD3B0B592427EC47003AA2CB /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0B5A2427EC5F003AA2CB /* StrokeOrderView */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		FD3B0B5A2427EC5F003AA2CB /* StrokeOrderView */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0B5B2427EE51003AA2CB /* EWCStrokeOrderView.h */,
+				FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */,
+			);
+			path = StrokeOrderView;
+			sourceTree = "<group>";
+		};
+		FD3B0B5E2427FB2E003AA2CB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0B5F2427FB8E003AA2CB /* StrokeOrder */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FD3B0B5F2427FB8E003AA2CB /* StrokeOrder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StrokeOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3B0B5D2427EE51003AA2CB /* EWCStrokeOrderView.m in Sources */,
 				FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */,
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
 				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
@@ -442,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RU9C9DUDK9;
 				INFOPLIST_FILE = Kakitori/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RU9C9DUDK9;
 				INFOPLIST_FILE = Kakitori/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
