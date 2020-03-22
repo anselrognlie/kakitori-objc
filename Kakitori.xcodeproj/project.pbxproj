@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B252427EAC6003AA2CB /* AppDelegate.m */; };
+		FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B282427EAC6003AA2CB /* SceneDelegate.m */; };
+		FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B2B2427EAC6003AA2CB /* ViewController.m */; };
+		FD3B0B2F2427EAC6003AA2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B0B2D2427EAC6003AA2CB /* Main.storyboard */; };
+		FD3B0B312427EAC8003AA2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3B0B302427EAC8003AA2CB /* Assets.xcassets */; };
+		FD3B0B342427EAC8003AA2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B0B322427EAC8003AA2CB /* LaunchScreen.storyboard */; };
+		FD3B0B372427EAC8003AA2CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B362427EAC8003AA2CB /* main.m */; };
+		FD3B0B412427EAC8003AA2CB /* KakitoriTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */; };
+		FD3B0B4C2427EAC8003AA2CB /* KakitoriUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD3B0B3D2427EAC8003AA2CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3B0B192427EAC6003AA2CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3B0B202427EAC6003AA2CB;
+			remoteInfo = Kakitori;
+		};
+		FD3B0B482427EAC8003AA2CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3B0B192427EAC6003AA2CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3B0B202427EAC6003AA2CB;
+			remoteInfo = Kakitori;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD3B0B212427EAC6003AA2CB /* Kakitori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kakitori.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3B0B242427EAC6003AA2CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FD3B0B252427EAC6003AA2CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD3B0B272427EAC6003AA2CB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		FD3B0B282427EAC6003AA2CB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		FD3B0B2A2427EAC6003AA2CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FD3B0B2B2427EAC6003AA2CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FD3B0B2E2427EAC6003AA2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FD3B0B302427EAC8003AA2CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD3B0B332427EAC8003AA2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD3B0B352427EAC8003AA2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3B0B362427EAC8003AA2CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FD3B0B3C2427EAC8003AA2CB /* KakitoriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakitoriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KakitoriTests.m; sourceTree = "<group>"; };
+		FD3B0B422427EAC8003AA2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3B0B472427EAC8003AA2CB /* KakitoriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakitoriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KakitoriUITests.m; sourceTree = "<group>"; };
+		FD3B0B4D2427EAC8003AA2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD3B0B1E2427EAC6003AA2CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3B0B392427EAC8003AA2CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3B0B442427EAC8003AA2CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD3B0B182427EAC6003AA2CB = {
+			isa = PBXGroup;
+			children = (
+				FD3B0B232427EAC6003AA2CB /* Kakitori */,
+				FD3B0B3F2427EAC8003AA2CB /* KakitoriTests */,
+				FD3B0B4A2427EAC8003AA2CB /* KakitoriUITests */,
+				FD3B0B222427EAC6003AA2CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD3B0B222427EAC6003AA2CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0B212427EAC6003AA2CB /* Kakitori.app */,
+				FD3B0B3C2427EAC8003AA2CB /* KakitoriTests.xctest */,
+				FD3B0B472427EAC8003AA2CB /* KakitoriUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD3B0B232427EAC6003AA2CB /* Kakitori */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0B242427EAC6003AA2CB /* AppDelegate.h */,
+				FD3B0B252427EAC6003AA2CB /* AppDelegate.m */,
+				FD3B0B272427EAC6003AA2CB /* SceneDelegate.h */,
+				FD3B0B282427EAC6003AA2CB /* SceneDelegate.m */,
+				FD3B0B2A2427EAC6003AA2CB /* ViewController.h */,
+				FD3B0B2B2427EAC6003AA2CB /* ViewController.m */,
+				FD3B0B2D2427EAC6003AA2CB /* Main.storyboard */,
+				FD3B0B302427EAC8003AA2CB /* Assets.xcassets */,
+				FD3B0B322427EAC8003AA2CB /* LaunchScreen.storyboard */,
+				FD3B0B352427EAC8003AA2CB /* Info.plist */,
+				FD3B0B362427EAC8003AA2CB /* main.m */,
+			);
+			path = Kakitori;
+			sourceTree = "<group>";
+		};
+		FD3B0B3F2427EAC8003AA2CB /* KakitoriTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */,
+				FD3B0B422427EAC8003AA2CB /* Info.plist */,
+			);
+			path = KakitoriTests;
+			sourceTree = "<group>";
+		};
+		FD3B0B4A2427EAC8003AA2CB /* KakitoriUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */,
+				FD3B0B4D2427EAC8003AA2CB /* Info.plist */,
+			);
+			path = KakitoriUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD3B0B202427EAC6003AA2CB /* Kakitori */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3B0B502427EAC8003AA2CB /* Build configuration list for PBXNativeTarget "Kakitori" */;
+			buildPhases = (
+				FD3B0B1D2427EAC6003AA2CB /* Sources */,
+				FD3B0B1E2427EAC6003AA2CB /* Frameworks */,
+				FD3B0B1F2427EAC6003AA2CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kakitori;
+			productName = Kakitori;
+			productReference = FD3B0B212427EAC6003AA2CB /* Kakitori.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD3B0B3B2427EAC8003AA2CB /* KakitoriTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3B0B532427EAC8003AA2CB /* Build configuration list for PBXNativeTarget "KakitoriTests" */;
+			buildPhases = (
+				FD3B0B382427EAC8003AA2CB /* Sources */,
+				FD3B0B392427EAC8003AA2CB /* Frameworks */,
+				FD3B0B3A2427EAC8003AA2CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD3B0B3E2427EAC8003AA2CB /* PBXTargetDependency */,
+			);
+			name = KakitoriTests;
+			productName = KakitoriTests;
+			productReference = FD3B0B3C2427EAC8003AA2CB /* KakitoriTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD3B0B462427EAC8003AA2CB /* KakitoriUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3B0B562427EAC8003AA2CB /* Build configuration list for PBXNativeTarget "KakitoriUITests" */;
+			buildPhases = (
+				FD3B0B432427EAC8003AA2CB /* Sources */,
+				FD3B0B442427EAC8003AA2CB /* Frameworks */,
+				FD3B0B452427EAC8003AA2CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD3B0B492427EAC8003AA2CB /* PBXTargetDependency */,
+			);
+			name = KakitoriUITests;
+			productName = KakitoriUITests;
+			productReference = FD3B0B472427EAC8003AA2CB /* KakitoriUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD3B0B192427EAC6003AA2CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Ansel Rognlie";
+				TargetAttributes = {
+					FD3B0B202427EAC6003AA2CB = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FD3B0B3B2427EAC8003AA2CB = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FD3B0B202427EAC6003AA2CB;
+					};
+					FD3B0B462427EAC8003AA2CB = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FD3B0B202427EAC6003AA2CB;
+					};
+				};
+			};
+			buildConfigurationList = FD3B0B1C2427EAC6003AA2CB /* Build configuration list for PBXProject "Kakitori" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD3B0B182427EAC6003AA2CB;
+			productRefGroup = FD3B0B222427EAC6003AA2CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD3B0B202427EAC6003AA2CB /* Kakitori */,
+				FD3B0B3B2427EAC8003AA2CB /* KakitoriTests */,
+				FD3B0B462427EAC8003AA2CB /* KakitoriUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD3B0B1F2427EAC6003AA2CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3B0B342427EAC8003AA2CB /* LaunchScreen.storyboard in Resources */,
+				FD3B0B312427EAC8003AA2CB /* Assets.xcassets in Resources */,
+				FD3B0B2F2427EAC6003AA2CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3B0B3A2427EAC8003AA2CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3B0B452427EAC8003AA2CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD3B0B1D2427EAC6003AA2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */,
+				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
+				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
+				FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3B0B382427EAC8003AA2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3B0B412427EAC8003AA2CB /* KakitoriTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3B0B432427EAC8003AA2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3B0B4C2427EAC8003AA2CB /* KakitoriUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD3B0B3E2427EAC8003AA2CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3B0B202427EAC6003AA2CB /* Kakitori */;
+			targetProxy = FD3B0B3D2427EAC8003AA2CB /* PBXContainerItemProxy */;
+		};
+		FD3B0B492427EAC8003AA2CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3B0B202427EAC6003AA2CB /* Kakitori */;
+			targetProxy = FD3B0B482427EAC8003AA2CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD3B0B2D2427EAC6003AA2CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD3B0B2E2427EAC6003AA2CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FD3B0B322427EAC8003AA2CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD3B0B332427EAC8003AA2CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD3B0B4E2427EAC8003AA2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FD3B0B4F2427EAC8003AA2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD3B0B512427EAC8003AA2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				INFOPLIST_FILE = Kakitori/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.Kakitori;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD3B0B522427EAC8003AA2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				INFOPLIST_FILE = Kakitori/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.Kakitori;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD3B0B542427EAC8003AA2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				INFOPLIST_FILE = KakitoriTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.KakitoriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kakitori.app/Kakitori";
+			};
+			name = Debug;
+		};
+		FD3B0B552427EAC8003AA2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				INFOPLIST_FILE = KakitoriTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.KakitoriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kakitori.app/Kakitori";
+			};
+			name = Release;
+		};
+		FD3B0B572427EAC8003AA2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				INFOPLIST_FILE = KakitoriUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.KakitoriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kakitori;
+			};
+			name = Debug;
+		};
+		FD3B0B582427EAC8003AA2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				INFOPLIST_FILE = KakitoriUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.KakitoriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kakitori;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD3B0B1C2427EAC6003AA2CB /* Build configuration list for PBXProject "Kakitori" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3B0B4E2427EAC8003AA2CB /* Debug */,
+				FD3B0B4F2427EAC8003AA2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3B0B502427EAC8003AA2CB /* Build configuration list for PBXNativeTarget "Kakitori" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3B0B512427EAC8003AA2CB /* Debug */,
+				FD3B0B522427EAC8003AA2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3B0B532427EAC8003AA2CB /* Build configuration list for PBXNativeTarget "KakitoriTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3B0B542427EAC8003AA2CB /* Debug */,
+				FD3B0B552427EAC8003AA2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD3B0B562427EAC8003AA2CB /* Build configuration list for PBXNativeTarget "KakitoriUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3B0B572427EAC8003AA2CB /* Debug */,
+				FD3B0B582427EAC8003AA2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD3B0B192427EAC6003AA2CB /* Project object */;
+}
