@@ -17,6 +17,15 @@
 		FD3B0B412427EAC8003AA2CB /* KakitoriTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */; };
 		FD3B0B4C2427EAC8003AA2CB /* KakitoriUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */; };
 		FD3B0B5D2427EE51003AA2CB /* EWCStrokeOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */; };
+		FD3B0BE8242A8659003AA2CB /* StdoutStatusWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD5242A8659003AA2CB /* StdoutStatusWriter.m */; };
+		FD3B0BE9242A8659003AA2CB /* EWCStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD7242A8659003AA2CB /* EWCStroke.m */; };
+		FD3B0BEA242A8659003AA2CB /* EWCCurveStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD9242A8659003AA2CB /* EWCCurveStrokePart.m */; };
+		FD3B0BEB242A8659003AA2CB /* EWCStrokeDataError.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDA242A8659003AA2CB /* EWCStrokeDataError.m */; };
+		FD3B0BEC242A865A003AA2CB /* EWCStrokeDataParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDB242A8659003AA2CB /* EWCStrokeDataParserDelegate.m */; };
+		FD3B0BED242A865A003AA2CB /* EWCStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDD242A8659003AA2CB /* EWCStrokePart.m */; };
+		FD3B0BEE242A865A003AA2CB /* EWCMoveStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDE242A8659003AA2CB /* EWCMoveStrokePart.m */; };
+		FD3B0BEF242A865A003AA2CB /* EWCStrokePartTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDF242A8659003AA2CB /* EWCStrokePartTokenizer.m */; };
+		FD3B0BF0242A865A003AA2CB /* EWCStrokeData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE6242A8659003AA2CB /* EWCStrokeData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +66,26 @@
 		FD3B0B4D2427EAC8003AA2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3B0B5B2427EE51003AA2CB /* EWCStrokeOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeOrderView.h; sourceTree = "<group>"; };
 		FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeOrderView.m; sourceTree = "<group>"; };
+		FD3B0BD3242A8659003AA2CB /* StdoutStatusWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdoutStatusWriter.h; sourceTree = "<group>"; };
+		FD3B0BD4242A8659003AA2CB /* StatusWriterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusWriterProtocol.h; sourceTree = "<group>"; };
+		FD3B0BD5242A8659003AA2CB /* StdoutStatusWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StdoutStatusWriter.m; sourceTree = "<group>"; };
+		FD3B0BD7242A8659003AA2CB /* EWCStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStroke.m; sourceTree = "<group>"; };
+		FD3B0BD8242A8659003AA2CB /* EWCStrokePartTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokePartTokenizer.h; sourceTree = "<group>"; };
+		FD3B0BD9242A8659003AA2CB /* EWCCurveStrokePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCCurveStrokePart.m; sourceTree = "<group>"; };
+		FD3B0BDA242A8659003AA2CB /* EWCStrokeDataError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeDataError.m; sourceTree = "<group>"; };
+		FD3B0BDB242A8659003AA2CB /* EWCStrokeDataParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeDataParserDelegate.m; sourceTree = "<group>"; };
+		FD3B0BDC242A8659003AA2CB /* EWCStrokeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokeData.h; sourceTree = "<group>"; };
+		FD3B0BDD242A8659003AA2CB /* EWCStrokePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStrokePart.m; sourceTree = "<group>"; };
+		FD3B0BDE242A8659003AA2CB /* EWCMoveStrokePart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCMoveStrokePart.m; sourceTree = "<group>"; };
+		FD3B0BDF242A8659003AA2CB /* EWCStrokePartTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStrokePartTokenizer.m; sourceTree = "<group>"; };
+		FD3B0BE0242A8659003AA2CB /* EWCStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStroke.h; sourceTree = "<group>"; };
+		FD3B0BE1242A8659003AA2CB /* EWCStrokeData+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EWCStrokeData+Protected.h"; sourceTree = "<group>"; };
+		FD3B0BE2242A8659003AA2CB /* EWCStrokeDataError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokeDataError.h; sourceTree = "<group>"; };
+		FD3B0BE3242A8659003AA2CB /* EWCCurveStrokePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCCurveStrokePart.h; sourceTree = "<group>"; };
+		FD3B0BE4242A8659003AA2CB /* EWCMoveStrokePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCMoveStrokePart.h; sourceTree = "<group>"; };
+		FD3B0BE5242A8659003AA2CB /* EWCStrokePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokePart.h; sourceTree = "<group>"; };
+		FD3B0BE6242A8659003AA2CB /* EWCStrokeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeData.m; sourceTree = "<group>"; };
+		FD3B0BE7242A8659003AA2CB /* EWCStrokeDataParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokeDataParserDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,14 +191,42 @@
 		FD3B0B5E2427FB2E003AA2CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FD3B0B5F2427FB8E003AA2CB /* StrokeOrder */,
+				FD3B0BD2242A8659003AA2CB /* Status */,
+				FD3B0BD6242A8659003AA2CB /* StrokeOrder */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		FD3B0B5F2427FB8E003AA2CB /* StrokeOrder */ = {
+		FD3B0BD2242A8659003AA2CB /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B0BD3242A8659003AA2CB /* StdoutStatusWriter.h */,
+				FD3B0BD4242A8659003AA2CB /* StatusWriterProtocol.h */,
+				FD3B0BD5242A8659003AA2CB /* StdoutStatusWriter.m */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		FD3B0BD6242A8659003AA2CB /* StrokeOrder */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0BD7242A8659003AA2CB /* EWCStroke.m */,
+				FD3B0BD8242A8659003AA2CB /* EWCStrokePartTokenizer.h */,
+				FD3B0BD9242A8659003AA2CB /* EWCCurveStrokePart.m */,
+				FD3B0BDA242A8659003AA2CB /* EWCStrokeDataError.m */,
+				FD3B0BDB242A8659003AA2CB /* EWCStrokeDataParserDelegate.m */,
+				FD3B0BDC242A8659003AA2CB /* EWCStrokeData.h */,
+				FD3B0BDD242A8659003AA2CB /* EWCStrokePart.m */,
+				FD3B0BDE242A8659003AA2CB /* EWCMoveStrokePart.m */,
+				FD3B0BDF242A8659003AA2CB /* EWCStrokePartTokenizer.m */,
+				FD3B0BE0242A8659003AA2CB /* EWCStroke.h */,
+				FD3B0BE1242A8659003AA2CB /* EWCStrokeData+Protected.h */,
+				FD3B0BE2242A8659003AA2CB /* EWCStrokeDataError.h */,
+				FD3B0BE3242A8659003AA2CB /* EWCCurveStrokePart.h */,
+				FD3B0BE4242A8659003AA2CB /* EWCMoveStrokePart.h */,
+				FD3B0BE5242A8659003AA2CB /* EWCStrokePart.h */,
+				FD3B0BE6242A8659003AA2CB /* EWCStrokeData.m */,
+				FD3B0BE7242A8659003AA2CB /* EWCStrokeDataParserDelegate.h */,
 			);
 			path = StrokeOrder;
 			sourceTree = "<group>";
@@ -304,11 +361,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3B0BE9242A8659003AA2CB /* EWCStroke.m in Sources */,
+				FD3B0BEB242A8659003AA2CB /* EWCStrokeDataError.m in Sources */,
 				FD3B0B5D2427EE51003AA2CB /* EWCStrokeOrderView.m in Sources */,
+				FD3B0BEC242A865A003AA2CB /* EWCStrokeDataParserDelegate.m in Sources */,
+				FD3B0BEA242A8659003AA2CB /* EWCCurveStrokePart.m in Sources */,
+				FD3B0BE8242A8659003AA2CB /* StdoutStatusWriter.m in Sources */,
 				FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */,
+				FD3B0BF0242A865A003AA2CB /* EWCStrokeData.m in Sources */,
+				FD3B0BEE242A865A003AA2CB /* EWCMoveStrokePart.m in Sources */,
+				FD3B0BED242A865A003AA2CB /* EWCStrokePart.m in Sources */,
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
 				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
 				FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */,
+				FD3B0BEF242A865A003AA2CB /* EWCStrokePartTokenizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
