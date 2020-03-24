@@ -117,23 +117,23 @@
 		FD3B0BAD242A6F2E003AA2CB /* StrokeOrder */ = {
 			isa = PBXGroup;
 			children = (
-				FD3B0BAE242A6F2E003AA2CB /* EWCStroke.m */,
-				FD3B0BAF242A6F2E003AA2CB /* EWCStrokePartTokenizer.h */,
+				FD3B0BBA242A6F2E003AA2CB /* EWCCurveStrokePart.h */,
 				FD3B0BB0242A6F2E003AA2CB /* EWCCurveStrokePart.m */,
-				FD3B0BB1242A6F2E003AA2CB /* EWCStrokeDataError.m */,
-				FD3B0BB2242A6F2E003AA2CB /* EWCStrokeDataParserDelegate.m */,
-				FD3B0BB3242A6F2E003AA2CB /* EWCStrokeData.h */,
-				FD3B0BB4242A6F2E003AA2CB /* EWCStrokePart.m */,
+				FD3B0BBB242A6F2E003AA2CB /* EWCMoveStrokePart.h */,
 				FD3B0BB5242A6F2E003AA2CB /* EWCMoveStrokePart.m */,
-				FD3B0BB6242A6F2E003AA2CB /* EWCStrokePartTokenizer.m */,
 				FD3B0BB7242A6F2E003AA2CB /* EWCStroke.h */,
+				FD3B0BAE242A6F2E003AA2CB /* EWCStroke.m */,
+				FD3B0BB3242A6F2E003AA2CB /* EWCStrokeData.h */,
+				FD3B0BBD242A6F2E003AA2CB /* EWCStrokeData.m */,
 				FD3B0BB8242A6F2E003AA2CB /* EWCStrokeData+Protected.h */,
 				FD3B0BB9242A6F2E003AA2CB /* EWCStrokeDataError.h */,
-				FD3B0BBA242A6F2E003AA2CB /* EWCCurveStrokePart.h */,
-				FD3B0BBB242A6F2E003AA2CB /* EWCMoveStrokePart.h */,
-				FD3B0BBC242A6F2E003AA2CB /* EWCStrokePart.h */,
-				FD3B0BBD242A6F2E003AA2CB /* EWCStrokeData.m */,
+				FD3B0BB1242A6F2E003AA2CB /* EWCStrokeDataError.m */,
 				FD3B0BBE242A6F2E003AA2CB /* EWCStrokeDataParserDelegate.h */,
+				FD3B0BB2242A6F2E003AA2CB /* EWCStrokeDataParserDelegate.m */,
+				FD3B0BBC242A6F2E003AA2CB /* EWCStrokePart.h */,
+				FD3B0BB4242A6F2E003AA2CB /* EWCStrokePart.m */,
+				FD3B0BAF242A6F2E003AA2CB /* EWCStrokePartTokenizer.h */,
+				FD3B0BB6242A6F2E003AA2CB /* EWCStrokePartTokenizer.m */,
 			);
 			path = StrokeOrder;
 			sourceTree = "<group>";
