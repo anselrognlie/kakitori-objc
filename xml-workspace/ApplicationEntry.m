@@ -8,7 +8,7 @@
 
 #import "ApplicationEntry.h"
 #import "EWCStrokeDataParserDelegate.h"
-#import "StatusWriterProtocol.h"
+#import "StdoutStatusWriter.h"
 
 @implementation ApplicationEntry {
   NSArray<NSString *>* _args;
@@ -43,6 +43,7 @@
   NSURL *filePath = [NSURL fileURLWithPath:_xmlFilename];
   NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:filePath];
   [_delegate reset];
+  _delegate.writer = [StdoutStatusWriter new];
   parser.delegate = _delegate;
   [parser parse];
 
