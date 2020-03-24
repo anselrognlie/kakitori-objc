@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>xml-lib.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>xml-workspace.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +13,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>FD3B0B682427FDA9003AA2CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD3B0B762427FDE8003AA2CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

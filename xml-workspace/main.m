@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../xml-lib/xml_lib.h"
-#import "../xml-lib/LineWriter.h"
+#import "xml_lib.h"
+#import "LineWriter.h"
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
