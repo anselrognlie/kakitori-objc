@@ -16,8 +16,8 @@
 		FD3B0BC4242A6F2E003AA2CB /* EWCMoveStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BB5242A6F2E003AA2CB /* EWCMoveStrokePart.m */; };
 		FD3B0BC5242A6F2E003AA2CB /* EWCStrokePartTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BB6242A6F2E003AA2CB /* EWCStrokePartTokenizer.m */; };
 		FD3B0BC6242A6F2E003AA2CB /* EWCStrokeData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BBD242A6F2E003AA2CB /* EWCStrokeData.m */; };
-		FD3B0BCB242A7046003AA2CB /* xml_lib.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BC7242A7046003AA2CB /* xml_lib.m */; };
-		FD3B0BCC242A7046003AA2CB /* LineWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BC8242A7046003AA2CB /* LineWriter.m */; };
+		FD3B0BCB242A7046003AA2CB /* ApplicationEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BC7242A7046003AA2CB /* ApplicationEntry.m */; };
+		FD3B0BD1242A7886003AA2CB /* StdoutStatusWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD0242A7886003AA2CB /* StdoutStatusWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,10 +52,11 @@
 		FD3B0BBC242A6F2E003AA2CB /* EWCStrokePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokePart.h; sourceTree = "<group>"; };
 		FD3B0BBD242A6F2E003AA2CB /* EWCStrokeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeData.m; sourceTree = "<group>"; };
 		FD3B0BBE242A6F2E003AA2CB /* EWCStrokeDataParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokeDataParserDelegate.h; sourceTree = "<group>"; };
-		FD3B0BC7242A7046003AA2CB /* xml_lib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xml_lib.m; sourceTree = "<group>"; };
-		FD3B0BC8242A7046003AA2CB /* LineWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineWriter.m; sourceTree = "<group>"; };
-		FD3B0BC9242A7046003AA2CB /* xml_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_lib.h; sourceTree = "<group>"; };
-		FD3B0BCA242A7046003AA2CB /* LineWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineWriter.h; sourceTree = "<group>"; };
+		FD3B0BC7242A7046003AA2CB /* ApplicationEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationEntry.m; sourceTree = "<group>"; };
+		FD3B0BC9242A7046003AA2CB /* ApplicationEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationEntry.h; sourceTree = "<group>"; };
+		FD3B0BCE242A74A9003AA2CB /* StatusWriterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusWriterProtocol.h; sourceTree = "<group>"; };
+		FD3B0BCF242A7886003AA2CB /* StdoutStatusWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdoutStatusWriter.h; sourceTree = "<group>"; };
+		FD3B0BD0242A7886003AA2CB /* StdoutStatusWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StdoutStatusWriter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,11 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				FD3B0BAC242A6F2E003AA2CB /* Modules */,
-				FD3B0BCA242A7046003AA2CB /* LineWriter.h */,
-				FD3B0BC8242A7046003AA2CB /* LineWriter.m */,
-				FD3B0BC9242A7046003AA2CB /* xml_lib.h */,
-				FD3B0BC7242A7046003AA2CB /* xml_lib.m */,
 				FD3B0B6C2427FDA9003AA2CB /* main.m */,
+				FD3B0BC9242A7046003AA2CB /* ApplicationEntry.h */,
+				FD3B0BC7242A7046003AA2CB /* ApplicationEntry.m */,
 			);
 			path = "xml-workspace";
 			sourceTree = "<group>";
@@ -109,6 +108,7 @@
 		FD3B0BAC242A6F2E003AA2CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B0BCD242A739E003AA2CB /* Status */,
 				FD3B0BAD242A6F2E003AA2CB /* StrokeOrder */,
 			);
 			path = Modules;
@@ -136,6 +136,16 @@
 				FD3B0BB6242A6F2E003AA2CB /* EWCStrokePartTokenizer.m */,
 			);
 			path = StrokeOrder;
+			sourceTree = "<group>";
+		};
+		FD3B0BCD242A739E003AA2CB /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0BCE242A74A9003AA2CB /* StatusWriterProtocol.h */,
+				FD3B0BCF242A7886003AA2CB /* StdoutStatusWriter.h */,
+				FD3B0BD0242A7886003AA2CB /* StdoutStatusWriter.m */,
+			);
+			path = Status;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,11 +211,11 @@
 				FD3B0B6D2427FDA9003AA2CB /* main.m in Sources */,
 				FD3B0BC0242A6F2E003AA2CB /* EWCCurveStrokePart.m in Sources */,
 				FD3B0BC5242A6F2E003AA2CB /* EWCStrokePartTokenizer.m in Sources */,
-				FD3B0BCC242A7046003AA2CB /* LineWriter.m in Sources */,
+				FD3B0BD1242A7886003AA2CB /* StdoutStatusWriter.m in Sources */,
 				FD3B0BC1242A6F2E003AA2CB /* EWCStrokeDataError.m in Sources */,
 				FD3B0BC2242A6F2E003AA2CB /* EWCStrokeDataParserDelegate.m in Sources */,
 				FD3B0BBF242A6F2E003AA2CB /* EWCStroke.m in Sources */,
-				FD3B0BCB242A7046003AA2CB /* xml_lib.m in Sources */,
+				FD3B0BCB242A7046003AA2CB /* ApplicationEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
