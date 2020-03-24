@@ -38,8 +38,8 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <exclude reference="tW6-h2-mJC"/>
                                 <include reference="hRr-Di-hib"/>
+                                <exclude reference="tW6-h2-mJC"/>
                             </mask>
                         </variation>
                     </view>

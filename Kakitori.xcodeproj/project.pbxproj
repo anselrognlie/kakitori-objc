@@ -86,6 +86,7 @@
 		FD3B0BE5242A8659003AA2CB /* EWCStrokePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokePart.h; sourceTree = "<group>"; };
 		FD3B0BE6242A8659003AA2CB /* EWCStrokeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeData.m; sourceTree = "<group>"; };
 		FD3B0BE7242A8659003AA2CB /* EWCStrokeDataParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokeDataParserDelegate.h; sourceTree = "<group>"; };
+		FD3B0BF1242A87FD003AA2CB /* Kakitori.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kakitori.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +137,7 @@
 		FD3B0B232427EAC6003AA2CB /* Kakitori */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B0BF1242A87FD003AA2CB /* Kakitori.entitlements */,
 				FD3B0B5E2427FB2E003AA2CB /* Modules */,
 				FD3B0B592427EC47003AA2CB /* Controls */,
 				FD3B0B242427EAC6003AA2CB /* AppDelegate.h */,
@@ -543,7 +545,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kakitori/Kakitori.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RU9C9DUDK9;
 				INFOPLIST_FILE = Kakitori/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -553,6 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.Kakitori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -561,7 +566,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kakitori/Kakitori.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RU9C9DUDK9;
 				INFOPLIST_FILE = Kakitori/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -571,6 +578,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.Kakitori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
