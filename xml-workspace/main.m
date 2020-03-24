@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "xml_lib.h"
-#import "LineWriter.h"
+#import "ApplicationEntry.h"
+#import "StdoutStatusWriter.h"
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
@@ -18,8 +18,8 @@ int main(int argc, const char * argv[]) {
       [args addObject:[NSString stringWithUTF8String:argv[i]]];
     }
 
-    xml_lib *lib = [xml_lib new];
-    lib.writer = [LineWriter new];
+    ApplicationEntry *lib = [ApplicationEntry new];
+    lib.writer = [StdoutStatusWriter new];
 
     int err = [lib startWithArgs:args];
 

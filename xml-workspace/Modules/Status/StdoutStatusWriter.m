@@ -6,9 +6,9 @@
 //  Copyright © 2020 Ansel Rognlie. All rights reserved.
 //
 
-#import "LineWriter.h"
+#import "StdoutStatusWriter.h"
 
-@implementation LineWriter
+@implementation StdoutStatusWriter
 
 - (void)write:(NSString *)msg {
   printf("%s", [msg cStringUsingEncoding:NSUTF8StringEncoding]);

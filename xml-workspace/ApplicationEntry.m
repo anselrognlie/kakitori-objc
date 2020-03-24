@@ -6,11 +6,11 @@
 //  Copyright © 2020 Ansel Rognlie. All rights reserved.
 //
 
-#import "xml_lib.h"
-#import "LineWriter.h"
+#import "ApplicationEntry.h"
 #import "EWCStrokeDataParserDelegate.h"
+#import "StatusWriterProtocol.h"
 
-@implementation xml_lib {
+@implementation ApplicationEntry {
   NSArray<NSString *>* _args;
   NSString *_xmlFilename;
   EWCStrokeDataParserDelegate *_delegate;
@@ -37,34 +37,11 @@
   return [self start];
 }
 
-//- (int)start {
-//  int err = 0;
-//  int index = 0;
-//  for (NSString *arg in _args) {
-//    int printResult = [self printArg:arg atIndex:index];
-//    ++index;
-//
-//    if (! printResult) {
-//      err = 1;
-//    }
-//  }
-//
-//  return err;
-//}
-//
-//- (int)printArg:(NSString *)arg atIndex:(int)index {
-//  [_writer writeLine:[NSString stringWithFormat:@"%d, %@", index, arg]];
-//  return 1;
-//}
-
 - (int)start {
   int err = 0;
 
-//  [_writer writeLine:[NSString stringWithFormat:@"file: %@", _xmlFilename]];
-
   NSURL *filePath = [NSURL fileURLWithPath:_xmlFilename];
   NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:filePath];
-  _delegate.writer = _writer;
   [_delegate reset];
   parser.delegate = _delegate;
   [parser parse];

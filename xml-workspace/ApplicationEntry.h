@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class LineWriter;
+@protocol StatusWriterProtocol;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface xml_lib : NSObject
+@interface ApplicationEntry : NSObject
 
-@property LineWriter *writer;
+@property NSObject<StatusWriterProtocol> *writer;
 
 - (int)startWithArgs:(NSArray<NSString *>*)args;
 
