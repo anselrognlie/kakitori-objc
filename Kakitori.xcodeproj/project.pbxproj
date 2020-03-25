@@ -26,6 +26,7 @@
 		FD3B0BEE242A865A003AA2CB /* EWCMoveStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDE242A8659003AA2CB /* EWCMoveStrokePart.m */; };
 		FD3B0BEF242A865A003AA2CB /* EWCStrokePartTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDF242A8659003AA2CB /* EWCStrokePartTokenizer.m */; };
 		FD3B0BF0242A865A003AA2CB /* EWCStrokeData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE6242A8659003AA2CB /* EWCStrokeData.m */; };
+		FD3B0BF4242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BF3242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		FD3B0BE6242A8659003AA2CB /* EWCStrokeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeData.m; sourceTree = "<group>"; };
 		FD3B0BE7242A8659003AA2CB /* EWCStrokeDataParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWCStrokeDataParserDelegate.h; sourceTree = "<group>"; };
 		FD3B0BF1242A87FD003AA2CB /* Kakitori.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kakitori.entitlements; sourceTree = "<group>"; };
+		FD3B0BF2242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCConsoleLogStatusWriter.h; sourceTree = "<group>"; };
+		FD3B0BF3242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCConsoleLogStatusWriter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 				FD3B0BD4242A8659003AA2CB /* EWCStatusWriterProtocol.h */,
 				FD3B0BD3242A8659003AA2CB /* EWCStdoutStatusWriter.h */,
 				FD3B0BD5242A8659003AA2CB /* EWCStdoutStatusWriter.m */,
+				FD3B0BF2242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.h */,
+				FD3B0BF3242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m */,
 			);
 			path = Status;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				FD3B0BED242A865A003AA2CB /* EWCStrokePart.m in Sources */,
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
 				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
+				FD3B0BF4242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m in Sources */,
 				FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */,
 				FD3B0BEF242A865A003AA2CB /* EWCStrokePartTokenizer.m in Sources */,
 			);
