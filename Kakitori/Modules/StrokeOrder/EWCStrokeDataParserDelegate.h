@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol StatusWriterProtocol;
+@protocol EWCStatusWriterProtocol;
 @class EWCStrokeData;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EWCStrokeDataParserDelegate : NSObject<NSXMLParserDelegate>
 
-@property NSObject<StatusWriterProtocol> *writer;
+@property NSObject<EWCStatusWriterProtocol> *writer;
 @property (readonly) NSError *lastError;
 @property (readonly) EWCStrokeData *strokeData;
 

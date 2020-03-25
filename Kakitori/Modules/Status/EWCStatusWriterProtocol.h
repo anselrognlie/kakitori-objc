@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol StatusWriterProtocol <NSObject>
+@protocol EWCStatusWriterProtocol <NSObject>
 - (void)write:(NSString *)msg;
 - (void)writeLine:(NSString *)msg;
 @end

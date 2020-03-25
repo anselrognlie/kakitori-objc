@@ -7,7 +7,7 @@
 //
 
 #import "EWCStrokeDataParserDelegate.h"
-#import "StatusWriterProtocol.h"
+#import "EWCStatusWriterProtocol.h"
 #import "EWCStrokeData.h"
 #import "EWCStrokeData+Protected.h"
 #import "EWCStrokeDataError.h"

@@ -6,9 +6,9 @@
 //  Copyright © 2020 Ansel Rognlie. All rights reserved.
 //
 
-#import "StdoutStatusWriter.h"
+#import "EWCStdoutStatusWriter.h"
 
-@implementation StdoutStatusWriter
+@implementation EWCStdoutStatusWriter
 
 - (void)write:(NSString *)msg {
   printf("%s", [msg cStringUsingEncoding:NSUTF8StringEncoding]);

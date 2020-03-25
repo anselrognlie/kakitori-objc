@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "StatusWriterProtocol.h"
+#import "EWCStatusWriterProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface StdoutStatusWriter : NSObject<StatusWriterProtocol>
+@interface EWCStdoutStatusWriter : NSObject<EWCStatusWriterProtocol>
 @end
 
 NS_ASSUME_NONNULL_END
