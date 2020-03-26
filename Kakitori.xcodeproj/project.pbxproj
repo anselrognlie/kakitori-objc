@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD349DBA242D180400A6C1C3 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD349DB9242D180400A6C1C3 /* libOCMock.a */; };
 		FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B252427EAC6003AA2CB /* AppDelegate.m */; };
 		FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B282427EAC6003AA2CB /* SceneDelegate.m */; };
 		FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B2B2427EAC6003AA2CB /* ViewController.m */; };
@@ -47,6 +48,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD349DB9242D180400A6C1C3 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = deps/lib/libOCMock.a; sourceTree = "<group>"; };
+		FD349DBF242D1A1A00A6C1C3 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		FD349DC0242D1A1A00A6C1C3 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		FD349DC1242D1A1A00A6C1C3 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		FD349DC2242D1A1A00A6C1C3 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		FD349DC3242D1A1A00A6C1C3 /* OCMVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMVerifier.h; sourceTree = "<group>"; };
+		FD349DC4242D1A1A00A6C1C3 /* OCMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMFunctions.h; sourceTree = "<group>"; };
+		FD349DC5242D1A1A00A6C1C3 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		FD349DC6242D1A1A00A6C1C3 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		FD349DC7242D1A1A00A6C1C3 /* OCMQuantifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMQuantifier.h; sourceTree = "<group>"; };
+		FD349DC8242D1A1A00A6C1C3 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		FD349DC9242D1A1A00A6C1C3 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		FD349DCA242D1A1A00A6C1C3 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
 		FD3B0B212427EAC6003AA2CB /* Kakitori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kakitori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3B0B242427EAC6003AA2CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD3B0B252427EAC6003AA2CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD349DBA242D180400A6C1C3 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,13 +132,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD349DB4242C2B2A00A6C1C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD349DB9242D180400A6C1C3 /* libOCMock.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD349DBC242D1A1A00A6C1C3 /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				FD349DBD242D1A1A00A6C1C3 /* include */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		FD349DBD242D1A1A00A6C1C3 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FD349DBE242D1A1A00A6C1C3 /* OCMock */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FD349DBE242D1A1A00A6C1C3 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				FD349DBF242D1A1A00A6C1C3 /* OCMockObject.h */,
+				FD349DC0242D1A1A00A6C1C3 /* OCMMacroState.h */,
+				FD349DC1242D1A1A00A6C1C3 /* OCMock.h */,
+				FD349DC2242D1A1A00A6C1C3 /* NSNotificationCenter+OCMAdditions.h */,
+				FD349DC3242D1A1A00A6C1C3 /* OCMVerifier.h */,
+				FD349DC4242D1A1A00A6C1C3 /* OCMFunctions.h */,
+				FD349DC5242D1A1A00A6C1C3 /* OCMStubRecorder.h */,
+				FD349DC6242D1A1A00A6C1C3 /* OCMRecorder.h */,
+				FD349DC7242D1A1A00A6C1C3 /* OCMQuantifier.h */,
+				FD349DC8242D1A1A00A6C1C3 /* OCMLocation.h */,
+				FD349DC9242D1A1A00A6C1C3 /* OCMConstraint.h */,
+				FD349DCA242D1A1A00A6C1C3 /* OCMArg.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		FD3B0B182427EAC6003AA2CB = {
 			isa = PBXGroup;
 			children = (
+				FD349DBC242D1A1A00A6C1C3 /* deps */,
 				FD3B0B232427EAC6003AA2CB /* Kakitori */,
 				FD3B0B3F2427EAC8003AA2CB /* KakitoriTests */,
 				FD3B0B4A2427EAC8003AA2CB /* KakitoriUITests */,
 				FD3B0B222427EAC6003AA2CB /* Products */,
+				FD349DB4242C2B2A00A6C1C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -487,10 +547,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				HEADER_SEARCH_PATHS = "deps/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -539,9 +601,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				HEADER_SEARCH_PATHS = "deps/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -560,6 +624,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.Kakitori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -582,6 +650,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.Kakitori;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -595,13 +667,23 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps",
+				);
 				INFOPLIST_FILE = KakitoriTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps",
+					"$(PROJECT_DIR)/deps/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.KakitoriTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -615,13 +697,23 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps",
+				);
 				INFOPLIST_FILE = KakitoriTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps",
+					"$(PROJECT_DIR)/deps/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.KakitoriTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

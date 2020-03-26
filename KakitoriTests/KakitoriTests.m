@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 
 @interface KakitoriTests : XCTestCase
 
@@ -33,5 +34,13 @@
 //        // Put the code you want to measure the time of here.
 //    }];
 //}
+
+- (void)testUsingMocks {
+  id mockString = OCMClassMock([NSString class]);
+  NSString *mocked = mockString;
+  [mocked length];
+
+  OCMVerify([mockString length]);
+}
 
 @end
