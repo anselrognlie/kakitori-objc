@@ -271,13 +271,13 @@
 		FD3B0B182427EAC6003AA2CB = {
 			isa = PBXGroup;
 			children = (
-				FD349DBC242D1A1A00A6C1C3 /* deps */,
 				FD3B0B232427EAC6003AA2CB /* Kakitori */,
+				FD349DF1242E716A00A6C1C3 /* KakitoriLib */,
 				FD3B0B3F2427EAC8003AA2CB /* KakitoriTests */,
 				FD3B0B4A2427EAC8003AA2CB /* KakitoriUITests */,
-				FD349DF1242E716A00A6C1C3 /* KakitoriLib */,
 				FD3B0B222427EAC6003AA2CB /* Products */,
 				FD349DB4242C2B2A00A6C1C3 /* Frameworks */,
+				FD349DBC242D1A1A00A6C1C3 /* deps */,
 			);
 			sourceTree = "<group>";
 		};
