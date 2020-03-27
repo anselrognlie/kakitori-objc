@@ -33,4 +33,15 @@
   [_strokes addObject:stroke];
 }
 
+- (void)setViewportWithLeft:(double)left
+    top:(double)top
+    right:(double)right
+    bottom:(double)bottom {
+
+  _viewLeft = left;
+  _viewTop = top;
+  _viewRight = right;
+  _viewBottom = bottom;
+}
+
 @end

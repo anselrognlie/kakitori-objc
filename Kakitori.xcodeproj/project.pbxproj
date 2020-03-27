@@ -8,6 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		FD349DBA242D180400A6C1C3 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD349DB9242D180400A6C1C3 /* libOCMock.a */; };
+		FD349DCF242D303600A6C1C3 /* EWCStrokeDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD349DCE242D303600A6C1C3 /* EWCStrokeDataTests.m */; };
+		FD349DE6242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit in Resources */ = {isa = PBXBuildFile; fileRef = FD349DE0242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit */; };
+		FD349DE7242E6CFB00A6C1C3 /* KVG-4eee-with-rel.strlit in Resources */ = {isa = PBXBuildFile; fileRef = FD349DE1242E6CFB00A6C1C3 /* KVG-4eee-with-rel.strlit */; };
+		FD349DE8242E6CFB00A6C1C3 /* KVG-4eee-curve-error.strlit in Resources */ = {isa = PBXBuildFile; fileRef = FD349DE2242E6CFB00A6C1C3 /* KVG-4eee-curve-error.strlit */; };
+		FD349DE9242E6CFB00A6C1C3 /* KVG-4eee-cmd-error.strlit in Resources */ = {isa = PBXBuildFile; fileRef = FD349DE3242E6CFB00A6C1C3 /* KVG-4eee-cmd-error.strlit */; };
+		FD349DEA242E6CFB00A6C1C3 /* KVG-4eee-move-error.strlit in Resources */ = {isa = PBXBuildFile; fileRef = FD349DE4242E6CFB00A6C1C3 /* KVG-4eee-move-error.strlit */; };
+		FD349DEB242E6CFB00A6C1C3 /* KVG-4eee.strlit in Resources */ = {isa = PBXBuildFile; fileRef = FD349DE5242E6CFB00A6C1C3 /* KVG-4eee.strlit */; };
+		FD349E00242E78D600A6C1C3 /* TestingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD349DFE242E781600A6C1C3 /* TestingAppDelegate.m */; };
+		FD349E03242E7A7000A6C1C3 /* EWCStatusWriterProtocol.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD4242A8659003AA2CB /* EWCStatusWriterProtocol.h */; };
+		FD349E04242E7A7000A6C1C3 /* EWCStdoutStatusWriter.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD3242A8659003AA2CB /* EWCStdoutStatusWriter.h */; };
+		FD349E05242E7A7000A6C1C3 /* EWCStdoutStatusWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD5242A8659003AA2CB /* EWCStdoutStatusWriter.m */; };
+		FD349E06242E7A7000A6C1C3 /* EWCConsoleLogStatusWriter.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BF2242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.h */; };
+		FD349E07242E7A7000A6C1C3 /* EWCConsoleLogStatusWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BF3242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m */; };
+		FD349E08242E7A7000A6C1C3 /* EWCCurveStrokePart.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE3242A8659003AA2CB /* EWCCurveStrokePart.h */; };
+		FD349E09242E7A7000A6C1C3 /* EWCCurveStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD9242A8659003AA2CB /* EWCCurveStrokePart.m */; };
+		FD349E0A242E7A7000A6C1C3 /* EWCMoveStrokePart.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE4242A8659003AA2CB /* EWCMoveStrokePart.h */; };
+		FD349E0B242E7A7000A6C1C3 /* EWCMoveStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDE242A8659003AA2CB /* EWCMoveStrokePart.m */; };
+		FD349E0C242E7A7000A6C1C3 /* EWCStroke.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE0242A8659003AA2CB /* EWCStroke.h */; };
+		FD349E0D242E7A7000A6C1C3 /* EWCStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD7242A8659003AA2CB /* EWCStroke.m */; };
+		FD349E0E242E7A7000A6C1C3 /* EWCStrokeData.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDC242A8659003AA2CB /* EWCStrokeData.h */; };
+		FD349E0F242E7A7000A6C1C3 /* EWCStrokeData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE6242A8659003AA2CB /* EWCStrokeData.m */; };
+		FD349E10242E7A7000A6C1C3 /* EWCStrokeData+Protected.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE1242A8659003AA2CB /* EWCStrokeData+Protected.h */; };
+		FD349E11242E7A7000A6C1C3 /* EWCStrokeDataError.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE2242A8659003AA2CB /* EWCStrokeDataError.h */; };
+		FD349E12242E7A7000A6C1C3 /* EWCStrokeDataError.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDA242A8659003AA2CB /* EWCStrokeDataError.m */; };
+		FD349E13242E7A7000A6C1C3 /* EWCStrokeDataParserDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE7242A8659003AA2CB /* EWCStrokeDataParserDelegate.h */; };
+		FD349E14242E7A7000A6C1C3 /* EWCStrokeDataParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDB242A8659003AA2CB /* EWCStrokeDataParserDelegate.m */; };
+		FD349E15242E7A7000A6C1C3 /* EWCStrokePart.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE5242A8659003AA2CB /* EWCStrokePart.h */; };
+		FD349E16242E7A7000A6C1C3 /* EWCStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDD242A8659003AA2CB /* EWCStrokePart.m */; };
+		FD349E17242E7A7000A6C1C3 /* EWCStrokePartTokenizer.h in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD8242A8659003AA2CB /* EWCStrokePartTokenizer.h */; };
+		FD349E18242E7A7000A6C1C3 /* EWCStrokePartTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDF242A8659003AA2CB /* EWCStrokePartTokenizer.m */; };
+		FD349E19242E7A7000A6C1C3 /* EWCStrokeDataLoader.h in Sources */ = {isa = PBXBuildFile; fileRef = FD349DD0242D870500A6C1C3 /* EWCStrokeDataLoader.h */; };
+		FD349E1A242E7A7000A6C1C3 /* EWCStrokeDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FD349DD1242D870500A6C1C3 /* EWCStrokeDataLoader.m */; };
+		FD349E1D242E7B6B00A6C1C3 /* libKakitoriLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD349DF0242E716A00A6C1C3 /* libKakitoriLib.a */; };
+		FD349E1F242E7CD600A6C1C3 /* EWCStatusWriterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD349E1E242E7CD600A6C1C3 /* EWCStatusWriterTests.m */; };
 		FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B252427EAC6003AA2CB /* AppDelegate.m */; };
 		FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B282427EAC6003AA2CB /* SceneDelegate.m */; };
 		FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B2B2427EAC6003AA2CB /* ViewController.m */; };
@@ -17,26 +51,22 @@
 		FD3B0B372427EAC8003AA2CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B362427EAC8003AA2CB /* main.m */; };
 		FD3B0B412427EAC8003AA2CB /* KakitoriTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */; };
 		FD3B0B4C2427EAC8003AA2CB /* KakitoriUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */; };
-		FD3B0B5D2427EE51003AA2CB /* EWCStrokeOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */; };
-		FD3B0BE8242A8659003AA2CB /* EWCStdoutStatusWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD5242A8659003AA2CB /* EWCStdoutStatusWriter.m */; };
-		FD3B0BE9242A8659003AA2CB /* EWCStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD7242A8659003AA2CB /* EWCStroke.m */; };
-		FD3B0BEA242A8659003AA2CB /* EWCCurveStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BD9242A8659003AA2CB /* EWCCurveStrokePart.m */; };
-		FD3B0BEB242A8659003AA2CB /* EWCStrokeDataError.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDA242A8659003AA2CB /* EWCStrokeDataError.m */; };
-		FD3B0BEC242A865A003AA2CB /* EWCStrokeDataParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDB242A8659003AA2CB /* EWCStrokeDataParserDelegate.m */; };
-		FD3B0BED242A865A003AA2CB /* EWCStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDD242A8659003AA2CB /* EWCStrokePart.m */; };
-		FD3B0BEE242A865A003AA2CB /* EWCMoveStrokePart.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDE242A8659003AA2CB /* EWCMoveStrokePart.m */; };
-		FD3B0BEF242A865A003AA2CB /* EWCStrokePartTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BDF242A8659003AA2CB /* EWCStrokePartTokenizer.m */; };
-		FD3B0BF0242A865A003AA2CB /* EWCStrokeData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BE6242A8659003AA2CB /* EWCStrokeData.m */; };
-		FD3B0BF4242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0BF3242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FD3B0B3D2427EAC8003AA2CB /* PBXContainerItemProxy */ = {
+		FD349DF9242E71B700A6C1C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD3B0B192427EAC6003AA2CB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FD3B0B202427EAC6003AA2CB;
-			remoteInfo = Kakitori;
+			remoteGlobalIDString = FD349DEF242E716A00A6C1C3;
+			remoteInfo = KakitoriLib;
+		};
+		FD349E1B242E7B3900A6C1C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3B0B192427EAC6003AA2CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD349DEF242E716A00A6C1C3;
+			remoteInfo = KakitoriLib;
 		};
 		FD3B0B482427EAC8003AA2CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -46,6 +76,18 @@
 			remoteInfo = Kakitori;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD349DEE242E716A00A6C1C3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD349DB9242D180400A6C1C3 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = deps/lib/libOCMock.a; sourceTree = "<group>"; };
@@ -61,6 +103,19 @@
 		FD349DC8242D1A1A00A6C1C3 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
 		FD349DC9242D1A1A00A6C1C3 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
 		FD349DCA242D1A1A00A6C1C3 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		FD349DCE242D303600A6C1C3 /* EWCStrokeDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeDataTests.m; sourceTree = "<group>"; };
+		FD349DD0242D870500A6C1C3 /* EWCStrokeDataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeDataLoader.h; sourceTree = "<group>"; };
+		FD349DD1242D870500A6C1C3 /* EWCStrokeDataLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeDataLoader.m; sourceTree = "<group>"; };
+		FD349DE0242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KVG-4eee-view-error.strlit"; sourceTree = "<group>"; };
+		FD349DE1242E6CFB00A6C1C3 /* KVG-4eee-with-rel.strlit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KVG-4eee-with-rel.strlit"; sourceTree = "<group>"; };
+		FD349DE2242E6CFB00A6C1C3 /* KVG-4eee-curve-error.strlit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KVG-4eee-curve-error.strlit"; sourceTree = "<group>"; };
+		FD349DE3242E6CFB00A6C1C3 /* KVG-4eee-cmd-error.strlit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KVG-4eee-cmd-error.strlit"; sourceTree = "<group>"; };
+		FD349DE4242E6CFB00A6C1C3 /* KVG-4eee-move-error.strlit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KVG-4eee-move-error.strlit"; sourceTree = "<group>"; };
+		FD349DE5242E6CFB00A6C1C3 /* KVG-4eee.strlit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "KVG-4eee.strlit"; sourceTree = "<group>"; };
+		FD349DF0242E716A00A6C1C3 /* libKakitoriLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKakitoriLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD349DFD242E781600A6C1C3 /* TestingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestingAppDelegate.h; sourceTree = "<group>"; };
+		FD349DFE242E781600A6C1C3 /* TestingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingAppDelegate.m; sourceTree = "<group>"; };
+		FD349E1E242E7CD600A6C1C3 /* EWCStatusWriterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStatusWriterTests.m; sourceTree = "<group>"; };
 		FD3B0B212427EAC6003AA2CB /* Kakitori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kakitori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3B0B242427EAC6003AA2CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FD3B0B252427EAC6003AA2CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -107,6 +162,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD349DED242E716A00A6C1C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD3B0B1E2427EAC6003AA2CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD349E1D242E7B6B00A6C1C3 /* libKakitoriLib.a in Frameworks */,
 				FD349DBA242D180400A6C1C3 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +238,36 @@
 			path = OCMock;
 			sourceTree = "<group>";
 		};
+		FD349DD6242DA1DF00A6C1C3 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				FD349DDF242E6CAA00A6C1C3 /* KVG */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		FD349DDF242E6CAA00A6C1C3 /* KVG */ = {
+			isa = PBXGroup;
+			children = (
+				FD349DE3242E6CFB00A6C1C3 /* KVG-4eee-cmd-error.strlit */,
+				FD349DE2242E6CFB00A6C1C3 /* KVG-4eee-curve-error.strlit */,
+				FD349DE4242E6CFB00A6C1C3 /* KVG-4eee-move-error.strlit */,
+				FD349DE0242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit */,
+				FD349DE1242E6CFB00A6C1C3 /* KVG-4eee-with-rel.strlit */,
+				FD349DE5242E6CFB00A6C1C3 /* KVG-4eee.strlit */,
+			);
+			path = KVG;
+			sourceTree = "<group>";
+		};
+		FD349DF1242E716A00A6C1C3 /* KakitoriLib */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B0BD2242A8659003AA2CB /* Status */,
+				FD3B0BD6242A8659003AA2CB /* StrokeOrder */,
+			);
+			path = KakitoriLib;
+			sourceTree = "<group>";
+		};
 		FD3B0B182427EAC6003AA2CB = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +275,7 @@
 				FD3B0B232427EAC6003AA2CB /* Kakitori */,
 				FD3B0B3F2427EAC8003AA2CB /* KakitoriTests */,
 				FD3B0B4A2427EAC8003AA2CB /* KakitoriUITests */,
+				FD349DF1242E716A00A6C1C3 /* KakitoriLib */,
 				FD3B0B222427EAC6003AA2CB /* Products */,
 				FD349DB4242C2B2A00A6C1C3 /* Frameworks */,
 			);
@@ -193,6 +287,7 @@
 				FD3B0B212427EAC6003AA2CB /* Kakitori.app */,
 				FD3B0B3C2427EAC8003AA2CB /* KakitoriTests.xctest */,
 				FD3B0B472427EAC8003AA2CB /* KakitoriUITests.xctest */,
+				FD349DF0242E716A00A6C1C3 /* libKakitoriLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				FD3B0BF1242A87FD003AA2CB /* Kakitori.entitlements */,
-				FD3B0B5E2427FB2E003AA2CB /* Modules */,
 				FD3B0B592427EC47003AA2CB /* Controls */,
 				FD3B0B242427EAC6003AA2CB /* AppDelegate.h */,
 				FD3B0B252427EAC6003AA2CB /* AppDelegate.m */,
@@ -221,8 +315,13 @@
 		FD3B0B3F2427EAC8003AA2CB /* KakitoriTests */ = {
 			isa = PBXGroup;
 			children = (
+				FD349DD6242DA1DF00A6C1C3 /* TestData */,
+				FD349DFD242E781600A6C1C3 /* TestingAppDelegate.h */,
+				FD349DFE242E781600A6C1C3 /* TestingAppDelegate.m */,
 				FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */,
 				FD3B0B422427EAC8003AA2CB /* Info.plist */,
+				FD349DCE242D303600A6C1C3 /* EWCStrokeDataTests.m */,
+				FD349E1E242E7CD600A6C1C3 /* EWCStatusWriterTests.m */,
 			);
 			path = KakitoriTests;
 			sourceTree = "<group>";
@@ -251,15 +350,6 @@
 				FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */,
 			);
 			path = StrokeOrderView;
-			sourceTree = "<group>";
-		};
-		FD3B0B5E2427FB2E003AA2CB /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				FD3B0BD2242A8659003AA2CB /* Status */,
-				FD3B0BD6242A8659003AA2CB /* StrokeOrder */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		FD3B0BD2242A8659003AA2CB /* Status */ = {
@@ -294,6 +384,8 @@
 				FD3B0BDD242A8659003AA2CB /* EWCStrokePart.m */,
 				FD3B0BD8242A8659003AA2CB /* EWCStrokePartTokenizer.h */,
 				FD3B0BDF242A8659003AA2CB /* EWCStrokePartTokenizer.m */,
+				FD349DD0242D870500A6C1C3 /* EWCStrokeDataLoader.h */,
+				FD349DD1242D870500A6C1C3 /* EWCStrokeDataLoader.m */,
 			);
 			path = StrokeOrder;
 			sourceTree = "<group>";
@@ -301,6 +393,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FD349DEF242E716A00A6C1C3 /* KakitoriLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD349DF6242E716A00A6C1C3 /* Build configuration list for PBXNativeTarget "KakitoriLib" */;
+			buildPhases = (
+				FD349DEC242E716A00A6C1C3 /* Sources */,
+				FD349DED242E716A00A6C1C3 /* Frameworks */,
+				FD349DEE242E716A00A6C1C3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KakitoriLib;
+			productName = KakitoriLib;
+			productReference = FD349DF0242E716A00A6C1C3 /* libKakitoriLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		FD3B0B202427EAC6003AA2CB /* Kakitori */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD3B0B502427EAC8003AA2CB /* Build configuration list for PBXNativeTarget "Kakitori" */;
@@ -312,6 +421,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD349DFA242E71B700A6C1C3 /* PBXTargetDependency */,
 			);
 			name = Kakitori;
 			productName = Kakitori;
@@ -329,7 +439,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FD3B0B3E2427EAC8003AA2CB /* PBXTargetDependency */,
+				FD349E1C242E7B3900A6C1C3 /* PBXTargetDependency */,
 			);
 			name = KakitoriTests;
 			productName = KakitoriTests;
@@ -363,12 +473,14 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Ansel Rognlie";
 				TargetAttributes = {
+					FD349DEF242E716A00A6C1C3 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 					FD3B0B202427EAC6003AA2CB = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					FD3B0B3B2427EAC8003AA2CB = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = FD3B0B202427EAC6003AA2CB;
 					};
 					FD3B0B462427EAC8003AA2CB = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -392,6 +504,7 @@
 				FD3B0B202427EAC6003AA2CB /* Kakitori */,
 				FD3B0B3B2427EAC8003AA2CB /* KakitoriTests */,
 				FD3B0B462427EAC8003AA2CB /* KakitoriUITests */,
+				FD349DEF242E716A00A6C1C3 /* KakitoriLib */,
 			);
 		};
 /* End PBXProject section */
@@ -411,6 +524,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD349DE8242E6CFB00A6C1C3 /* KVG-4eee-curve-error.strlit in Resources */,
+				FD349DE9242E6CFB00A6C1C3 /* KVG-4eee-cmd-error.strlit in Resources */,
+				FD349DEA242E6CFB00A6C1C3 /* KVG-4eee-move-error.strlit in Resources */,
+				FD349DE6242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit in Resources */,
+				FD349DE7242E6CFB00A6C1C3 /* KVG-4eee-with-rel.strlit in Resources */,
+				FD349DEB242E6CFB00A6C1C3 /* KVG-4eee.strlit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,25 +543,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD349DEC242E716A00A6C1C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD349E03242E7A7000A6C1C3 /* EWCStatusWriterProtocol.h in Sources */,
+				FD349E04242E7A7000A6C1C3 /* EWCStdoutStatusWriter.h in Sources */,
+				FD349E05242E7A7000A6C1C3 /* EWCStdoutStatusWriter.m in Sources */,
+				FD349E06242E7A7000A6C1C3 /* EWCConsoleLogStatusWriter.h in Sources */,
+				FD349E07242E7A7000A6C1C3 /* EWCConsoleLogStatusWriter.m in Sources */,
+				FD349E08242E7A7000A6C1C3 /* EWCCurveStrokePart.h in Sources */,
+				FD349E09242E7A7000A6C1C3 /* EWCCurveStrokePart.m in Sources */,
+				FD349E0A242E7A7000A6C1C3 /* EWCMoveStrokePart.h in Sources */,
+				FD349E0B242E7A7000A6C1C3 /* EWCMoveStrokePart.m in Sources */,
+				FD349E0C242E7A7000A6C1C3 /* EWCStroke.h in Sources */,
+				FD349E0D242E7A7000A6C1C3 /* EWCStroke.m in Sources */,
+				FD349E0E242E7A7000A6C1C3 /* EWCStrokeData.h in Sources */,
+				FD349E0F242E7A7000A6C1C3 /* EWCStrokeData.m in Sources */,
+				FD349E10242E7A7000A6C1C3 /* EWCStrokeData+Protected.h in Sources */,
+				FD349E11242E7A7000A6C1C3 /* EWCStrokeDataError.h in Sources */,
+				FD349E12242E7A7000A6C1C3 /* EWCStrokeDataError.m in Sources */,
+				FD349E13242E7A7000A6C1C3 /* EWCStrokeDataParserDelegate.h in Sources */,
+				FD349E14242E7A7000A6C1C3 /* EWCStrokeDataParserDelegate.m in Sources */,
+				FD349E15242E7A7000A6C1C3 /* EWCStrokePart.h in Sources */,
+				FD349E16242E7A7000A6C1C3 /* EWCStrokePart.m in Sources */,
+				FD349E17242E7A7000A6C1C3 /* EWCStrokePartTokenizer.h in Sources */,
+				FD349E18242E7A7000A6C1C3 /* EWCStrokePartTokenizer.m in Sources */,
+				FD349E19242E7A7000A6C1C3 /* EWCStrokeDataLoader.h in Sources */,
+				FD349E1A242E7A7000A6C1C3 /* EWCStrokeDataLoader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FD3B0B1D2427EAC6003AA2CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD3B0BE9242A8659003AA2CB /* EWCStroke.m in Sources */,
-				FD3B0BEB242A8659003AA2CB /* EWCStrokeDataError.m in Sources */,
-				FD3B0B5D2427EE51003AA2CB /* EWCStrokeOrderView.m in Sources */,
-				FD3B0BEC242A865A003AA2CB /* EWCStrokeDataParserDelegate.m in Sources */,
-				FD3B0BEA242A8659003AA2CB /* EWCCurveStrokePart.m in Sources */,
-				FD3B0BE8242A8659003AA2CB /* EWCStdoutStatusWriter.m in Sources */,
 				FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */,
-				FD3B0BF0242A865A003AA2CB /* EWCStrokeData.m in Sources */,
-				FD3B0BEE242A865A003AA2CB /* EWCMoveStrokePart.m in Sources */,
-				FD3B0BED242A865A003AA2CB /* EWCStrokePart.m in Sources */,
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
 				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
-				FD3B0BF4242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m in Sources */,
 				FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */,
-				FD3B0BEF242A865A003AA2CB /* EWCStrokePartTokenizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +589,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD349E1F242E7CD600A6C1C3 /* EWCStatusWriterTests.m in Sources */,
 				FD3B0B412427EAC8003AA2CB /* KakitoriTests.m in Sources */,
+				FD349E00242E78D600A6C1C3 /* TestingAppDelegate.m in Sources */,
+				FD349DCF242D303600A6C1C3 /* EWCStrokeDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,10 +607,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FD3B0B3E2427EAC8003AA2CB /* PBXTargetDependency */ = {
+		FD349DFA242E71B700A6C1C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FD3B0B202427EAC6003AA2CB /* Kakitori */;
-			targetProxy = FD3B0B3D2427EAC8003AA2CB /* PBXContainerItemProxy */;
+			target = FD349DEF242E716A00A6C1C3 /* KakitoriLib */;
+			targetProxy = FD349DF9242E71B700A6C1C3 /* PBXContainerItemProxy */;
+		};
+		FD349E1C242E7B3900A6C1C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD349DEF242E716A00A6C1C3 /* KakitoriLib */;
+			targetProxy = FD349E1B242E7B3900A6C1C3 /* PBXContainerItemProxy */;
 		};
 		FD3B0B492427EAC8003AA2CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -497,6 +644,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD349DF7242E716A00A6C1C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD349DF8242E716A00A6C1C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RU9C9DUDK9;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FD3B0B4E2427EAC8003AA2CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -664,7 +837,6 @@
 		FD3B0B542427EAC8003AA2CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RU9C9DUDK9;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -687,14 +859,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.KakitoriTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kakitori.app/Kakitori";
 			};
 			name = Debug;
 		};
 		FD3B0B552427EAC8003AA2CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RU9C9DUDK9;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -717,7 +887,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebbyware.KakitoriTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kakitori.app/Kakitori";
 			};
 			name = Release;
 		};
@@ -760,6 +929,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD349DF6242E716A00A6C1C3 /* Build configuration list for PBXNativeTarget "KakitoriLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD349DF7242E716A00A6C1C3 /* Debug */,
+				FD349DF8242E716A00A6C1C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FD3B0B1C2427EAC6003AA2CB /* Build configuration list for PBXProject "Kakitori" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

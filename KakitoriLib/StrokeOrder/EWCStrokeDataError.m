@@ -10,17 +10,17 @@
 
 static const char kEWCStrokeDataErrorDomain[] = "com.ebbyware.strokedata.ErrorDomain";
 
-static const int kEWCViewportParseErrorCode = -101;
-static const char kEWCViewportParseErrorDescription[] = "unable to parse stroke viewport";
+const int kEWCViewportParseErrorCode = -101;
+char const * const kEWCViewportParseErrorDescription = "unable to parse stroke viewport";
 
-static const int kEWCUnknownCommandParseErrorCode = -102;
-static const char kEWCUnknownCommandParseErrorDescription[] = "unknown command: %c";
+const int kEWCUnknownCommandParseErrorCode = -102;
+char const * const kEWCUnknownCommandParseErrorDescription = "unknown command: %c";
 
-static const int kEWCMoveParseErrorCode = -103;
-static const char kEWCMoveParseErrorDescription[] = "unable to parse move stroke part";
+const int kEWCMoveParseErrorCode = -103;
+char const * const kEWCMoveParseErrorDescription = "unable to parse move stroke part";
 
-static const int kEWCCurveParseErrorCode = -104;
-static const char kEWCCurveParseErrorDescription[] = "unable to parse curve stroke part";
+const int kEWCCurveParseErrorCode = -104;
+char const * const kEWCCurveParseErrorDescription = "unable to parse curve stroke part";
 
 @implementation EWCStrokeDataError
 

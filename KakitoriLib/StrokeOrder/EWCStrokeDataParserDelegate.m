@@ -16,23 +16,24 @@
 #import "EWCCurveStrokePart.h"
 #import "EWCStroke.h"
 
-typedef NS_ENUM(NSInteger, EWCStrokeParsingState) {
-  EWCStrokeParsingStateStart
-};
-
 static NSString * const kEWCSvgTag = @"svg";
 static NSString * const kEWCViewBoxAttr = @"viewBox";
 static NSString * const kEWCViewportDelimeter = @" ";
 static NSString * const kEWCPathTag = @"path";
 static NSString * const kEWCPathDataAttr = @"d";
 
-@implementation EWCStrokeDataParserDelegate {
-  EWCStrokeParsingState _parseState;
+@implementation EWCStrokeDataParserDelegate
+
+- (instancetype)init {
+  self = [super init];
+  if (self) {
+    [self reset];
+  }
+  return self;
 }
 
 - (void)reset {
   _strokeData = [EWCStrokeData new];
-  _parseState = EWCStrokeParsingStateStart;
   _lastError = nil;
 }
 
@@ -44,12 +45,9 @@ static NSString * const kEWCPathDataAttr = @"d";
 
   BOOL success = YES;
 
-//  [_writer writeLine:elementName];
-  switch (_parseState) {
-    case EWCStrokeParsingStateStart:
-      success = [self parseStartStateWithElement:elementName attributes:attributeDict];
-    break;
-  }
+  [_writer write:@"Parsed element: "];
+  [_writer writeLine:elementName];
+  success = [self parseStartStateWithElement:elementName attributes:attributeDict];
 
   if (! success) {
     [parser abortParsing];
@@ -78,17 +76,17 @@ static NSString * const kEWCPathDataAttr = @"d";
     return NO;
   }
 
-  _strokeData.viewLeft = parts[0].doubleValue;
-  _strokeData.viewTop = parts[1].doubleValue;
-  _strokeData.viewRight = parts[2].doubleValue;
-  _strokeData.viewBottom = parts[3].doubleValue;
+  [_strokeData
+    setViewportWithLeft:parts[0].doubleValue
+    top:parts[1].doubleValue
+    right:parts[2].doubleValue
+    bottom:parts[3].doubleValue];
 
   [_writer writeLine:[NSString stringWithFormat:@"[viewBox %g, %g, %g, %g]",
     _strokeData.viewLeft,
     _strokeData.viewTop,
     _strokeData.viewRight,
     _strokeData.viewBottom]];
-
 
   return YES;
 }

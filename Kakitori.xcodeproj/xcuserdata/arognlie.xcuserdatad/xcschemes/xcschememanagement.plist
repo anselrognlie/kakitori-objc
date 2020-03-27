@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>KakitoriLib.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>FD349DEF242E716A00A6C1C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>FD3B0B202427EAC6003AA2CB</key>
 		<dict>
 			<key>primary</key>

@@ -13,7 +13,7 @@
 }
 
 - (void)appendMessage:(NSString *)msg {
-  _pending = (_pending) ? [_pending stringByAppendingString:msg] : _pending;
+  _pending = (_pending) ? [_pending stringByAppendingString:msg] : msg;
 }
 
 - (void)write:(NSString *)msg {

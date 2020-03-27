@@ -9,7 +9,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EWCStrokeData (Protected)
+
+- (void)setViewportWithLeft:(double)left
+    top:(double)top
+    right:(double)right
+    bottom:(double)bottom;
+
 - (void)addStroke:(EWCStroke *)stroke;
+
 @end
 
 NS_ASSUME_NONNULL_END
