@@ -21,6 +21,11 @@
 
 @implementation ViewController
 
+- (IBAction)handleTap:(id)sender {
+  NSLog(@"%@", @"tapped");
+  [self.strokeOrderView startAnimation];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self loadResources];

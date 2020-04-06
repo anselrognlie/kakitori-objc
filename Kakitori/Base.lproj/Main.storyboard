@@ -22,10 +22,19 @@
                                     <constraint firstAttribute="width" secondItem="jms-Yz-3gy" secondAttribute="height" id="8DK-if-AFC"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0td-X2-3J4">
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="handleTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQd-Th-LGm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0td-X2-3J4" secondAttribute="bottom" constant="20" id="63S-TE-fI4"/>
                             <constraint firstItem="jms-Yz-3gy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7N8-qT-Nhb"/>
+                            <constraint firstItem="0td-X2-3J4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TfB-Yl-JIt"/>
                             <constraint firstItem="jms-Yz-3gy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Xnm-WO-Y6C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jms-Yz-3gy" secondAttribute="bottom" constant="20" id="hRr-Di-hib"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jms-Yz-3gy" secondAttribute="trailing" constant="20" id="tW6-h2-mJC"/>

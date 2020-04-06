@@ -16,6 +16,9 @@
 
 IB_DESIGNABLE
 
+const char kStrokeEndKey[] = "strokeEnd";
+const char kAnimationName[] = "stroke";
+
 @implementation EWCStrokeOrderView {
   EWCStrokeCapStyleConverter *_capStyleConverter;
   EWCStrokeJoinStyleConverter *_joinStyleConverter;
@@ -78,7 +81,7 @@ IB_DESIGNABLE
     [path applyTransform:t];
 
     // create a child layer to hold the path
-    CAShapeLayer *layer = [CAShapeLayer layer];
+    CAShapeLayer *layer = [CAShapeLayer new];
     layer.path = path.CGPath;
     layer.strokeStart = 0;
     layer.strokeEnd = 1.0;
@@ -95,6 +98,35 @@ IB_DESIGNABLE
   _strokeLayers = layers;
 
   NSLog(@"drawing...");
+}
+
+- (void)startAnimation {
+  NSLog(@"animating...");
+
+  for (CAShapeLayer *shape in _strokeLayers) {
+    [shape removeAllAnimations];
+  }
+
+  const double dtPerStroke = 0.3;
+  const int numStrokes = (int)_strokeLayers.count;
+
+  CFTimeInterval localLayerTime = [self.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+
+  for (int i = 0; i < numStrokes; ++i) {
+    CAShapeLayer *shape = _strokeLayers[i];
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@(kStrokeEndKey)];
+    anim.fillMode = kCAFillModeBackwards;
+    anim.fromValue = @0;
+    anim.toValue = @1.0;
+    anim.duration = dtPerStroke;// * (i + 1);
+    anim.beginTime = [shape convertTime:(dtPerStroke * i) + localLayerTime fromLayer:self.layer];
+    anim.timingFunction = [CAMediaTimingFunction functionWithControlPoints:.5 :0 :.5 :1];
+
+    shape.strokeStart = 0;
+    shape.strokeEnd = 1.0;
+
+    [shape addAnimation:anim forKey:@(kAnimationName)];
+  }
 }
 
 @end
