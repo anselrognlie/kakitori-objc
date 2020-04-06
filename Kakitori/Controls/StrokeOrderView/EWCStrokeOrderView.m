@@ -19,6 +19,8 @@ IB_DESIGNABLE
 @implementation EWCStrokeOrderView {
   EWCStrokeCapStyleConverter *_capStyleConverter;
   EWCStrokeJoinStyleConverter *_joinStyleConverter;
+  BOOL _needsLayout;
+  NSArray<CAShapeLayer *> *_strokeLayers;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
@@ -40,27 +42,24 @@ IB_DESIGNABLE
 - (instancetype)initInternal {
   _capStyleConverter = [EWCStrokeCapStyleConverter new];
   _joinStyleConverter = [EWCStrokeJoinStyleConverter new];
+  _needsLayout = YES;
   return self;
 }
 
 - (void)setStrokeData:(EWCStrokeData *)data {
   _strokeData = data;
-  [self setNeedsDisplay];
+  _needsLayout = YES;
+  [self setNeedsLayout];
 }
 
 - (void)layoutSubviews {
-}
+  if (! _needsLayout) { return; }
+  if (! _strokeData) { return; }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+  _needsLayout = NO;
 
-- (void)drawRect:(CGRect)rect
-{
+  NSMutableArray<CAShapeLayer *> *layers = [NSMutableArray<CAShapeLayer *> new];
+
   CGRect bounds = self.bounds;
   CGFloat ox = bounds.origin.x;
   CGFloat oy = bounds.origin.y;
@@ -77,12 +76,23 @@ IB_DESIGNABLE
   NSArray<UIBezierPath *> *paths = [_strokeData convertToPoints];
   for (UIBezierPath *path in paths) {
     [path applyTransform:t];
-    [[UIColor blackColor] setStroke];
-    path.lineWidth = _strokeData.strokeWidth * sx;
-    path.lineCapStyle = [_capStyleConverter toLineCap:_strokeData.strokeCapStyle];
-    path.lineJoinStyle = [_joinStyleConverter toLineJoin:_strokeData.strokeJoinStyle];
-    [path stroke];
+
+    // create a child layer to hold the path
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.path = path.CGPath;
+    layer.strokeStart = 0;
+    layer.strokeEnd = 1.0;
+    layer.strokeColor = [UIColor blackColor].CGColor;
+    layer.fillColor = nil;
+    layer.lineWidth = _strokeData.strokeWidth * sx;
+    layer.lineCap = [_capStyleConverter toLineCap:_strokeData.strokeCapStyle];
+    layer.lineJoin = [_joinStyleConverter toLineJoin:_strokeData.strokeJoinStyle];
+    [layers addObject:layer];
+
+    [self.layer addSublayer:layer];
   }
+
+  _strokeLayers = layers;
 
   NSLog(@"drawing...");
 }

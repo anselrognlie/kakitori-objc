@@ -10,11 +10,11 @@
 
 @implementation EWCStrokeCapStyleConverter
 
-- (CGLineCap)toLineCap:(EWCStrokeCapStyle)capStyle {
+- (CAShapeLayerLineCap)toLineCap:(EWCStrokeCapStyle)capStyle {
   switch (capStyle) {
     case EWCStrokeCapRound:
     default:
-      return kCGLineCapRound;
+      return kCALineCapRound;
   }
 }
 

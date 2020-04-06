@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EWCStrokeCapStyleConverter : NSObject
 
-- (CGLineCap)toLineCap:(EWCStrokeCapStyle)capStyle;
+- (CAShapeLayerLineCap)toLineCap:(EWCStrokeCapStyle)capStyle;
 
 @end
 

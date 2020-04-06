@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EWCStrokeJoinStyleConverter : NSObject
 
-- (CGLineJoin)toLineJoin:(EWCStrokeJoinStyle)joinStyle;
+- (CAShapeLayerLineJoin)toLineJoin:(EWCStrokeJoinStyle)joinStyle;
 
 @end
 

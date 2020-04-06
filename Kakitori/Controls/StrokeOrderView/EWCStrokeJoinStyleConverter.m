@@ -10,11 +10,11 @@
 
 @implementation EWCStrokeJoinStyleConverter
 
-- (CGLineJoin)toLineJoin:(EWCStrokeJoinStyle)joinStyle {
+- (CAShapeLayerLineJoin)toLineJoin:(EWCStrokeJoinStyle)joinStyle {
   switch (joinStyle) {
     case EWCStrokeJoinRound:
     default:
-      return kCGLineJoinRound;
+      return kCALineJoinRound;
   }
 }
 
