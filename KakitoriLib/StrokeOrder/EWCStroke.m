@@ -24,4 +24,8 @@
   return self;
 }
 
+- (NSArray<EWCStrokePart *> *) parts {
+  return _parts;
+}
+
 @end

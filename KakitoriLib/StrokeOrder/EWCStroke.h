@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EWCStroke : NSObject
 - (instancetype)initWithParts:(NSArray<EWCStrokePart *> *)parts;
+
+@property (readonly, atomic) NSArray<EWCStrokePart *> *parts;
 @end
 
 NS_ASSUME_NONNULL_END

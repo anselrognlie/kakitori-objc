@@ -21,6 +21,21 @@ static NSString * const kEWCViewBoxAttr = @"viewBox";
 static NSString * const kEWCViewportDelimeter = @" ";
 static NSString * const kEWCPathTag = @"path";
 static NSString * const kEWCPathDataAttr = @"d";
+static NSString * const kEWCGroupTag = @"g";
+static NSString * const kEWCIdAttr = @"id";
+static NSString * const kEWCStyleAttr = @"style";
+
+static NSString * const kEWCStyleStrokeWidthAttr = @"stroke-width";
+static NSString * const kEWCStyleStrokeLineCapAttr = @"stroke-linecap";
+static NSString * const kEWCStyleStrokeLineJoinAttr = @"stroke-linejoin";
+
+static NSString * const kEWCStyleStrokeLineJoinRoundStyle = @"round";
+static NSString * const kEWCStyleStrokeLineCapRoundStyle = @"round";
+
+static NSString * const kEWCKvgId = @"kvg:StrokePaths_";
+static const int kEWCKvgIdIndexEnd = 16;
+
+static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
 
 @implementation EWCStrokeDataParserDelegate
 
@@ -61,6 +76,58 @@ static NSString * const kEWCPathDataAttr = @"d";
     return [self parseViewport:attributeDict[kEWCViewBoxAttr]];
   } else if ([kEWCPathTag isEqualToString:elementName]) {
     return [self parsePath:attributeDict[kEWCPathDataAttr]];
+  } else if ([kEWCGroupTag isEqualToString:elementName]) {
+    return [self parseGroup:attributeDict];
+  }
+
+  return YES;
+}
+
+- (BOOL)parseGroup:(NSDictionary<NSString *, NSString *> *)attributeDict {
+  NSString *idStr = attributeDict[kEWCIdAttr];
+  if (idStr == nil) { return YES; }
+
+  if (idStr.length < kEWCKvgIdIndexEnd) { return YES; }
+
+  if (! [[idStr substringToIndex:kEWCKvgIdIndexEnd] isEqualToString:kEWCKvgId]) {
+    return YES;
+  }
+
+  NSString *style = attributeDict[kEWCStyleAttr];
+  if (style == nil) { return YES; }
+
+  NSDictionary<NSString *, NSString *> *styleAttr = parseAttributes(style);
+  return [self parseStyleAttributes:styleAttr];
+}
+
+- (BOOL)parseStyleAttributes:(NSDictionary<NSString *, NSString *> *)styleAttr {
+
+  NSString *strokeWidthStr = styleAttr[kEWCStyleStrokeWidthAttr];
+  if (strokeWidthStr) {
+    NSScanner *scanner = [NSScanner scannerWithString:strokeWidthStr];
+    double result;
+    BOOL parsed = [scanner scanDouble:&result];
+    if (! parsed) { return NO; }
+
+    [_strokeData setStrokeWidth:result];
+  }
+
+  NSString *strokeCapStyle = styleAttr[kEWCStyleStrokeLineCapAttr];
+  if (strokeCapStyle) {
+    if ([strokeCapStyle isEqualToString:kEWCStyleStrokeLineCapRoundStyle]) {
+      [_strokeData setStrokeCapStyle:EWCStrokeCapRound];
+    } else {
+      return NO;
+    }
+  }
+
+  NSString *strokeJoinStyle = styleAttr[kEWCStyleStrokeLineJoinAttr];
+  if (strokeJoinStyle) {
+    if ([strokeJoinStyle isEqualToString:kEWCStyleStrokeLineJoinRoundStyle]) {
+      [_strokeData setStrokeJoinStyle:EWCStrokeJoinRound];
+    } else {
+      return NO;
+    }
   }
 
   return YES;
@@ -186,3 +253,18 @@ static NSString * const kEWCPathDataAttr = @"d";
 }
 
 @end
+
+static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr) {
+  NSArray<NSString *> *pairArray = [attr componentsSeparatedByString:@";"];
+  NSMutableDictionary<NSString *, NSString *> *result =
+    [NSMutableDictionary<NSString *, NSString *> new];
+
+  for (NSString *pairStr in pairArray) {
+    if (pairStr.length == 0) { continue; }
+
+    NSArray<NSString *> *pair = [pairStr componentsSeparatedByString:@":"];
+    [result setValue:pair[1] forKey:pair[0]];
+  }
+
+  return result;
+}

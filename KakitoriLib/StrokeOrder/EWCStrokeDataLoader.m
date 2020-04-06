@@ -34,4 +34,16 @@
   return _delegate.strokeData;
 }
 
+- (EWCStrokeData *)loadFromURL:(NSURL *)url error:(NSError **)error {
+  NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
+  parser.delegate = _delegate;
+  [parser parse];
+
+  if (error) {
+    *error = _delegate.lastError;
+  }
+
+  return _delegate.strokeData;
+}
+
 @end

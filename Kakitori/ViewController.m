@@ -7,16 +7,40 @@
 //
 
 #import "ViewController.h"
+#import "EWCStrokeOrderView.h"
+#import "EWCStrokeDataParserDelegate.h"
+#import "EWCStrokeDataLoader.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet EWCStrokeOrderView *strokeOrderView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view.
+  [self loadResources];
+}
+
+- (void)loadResources {
+  NSBundle *bundle = [NSBundle mainBundle];
+  if (bundle) {
+    [self loadFromBundle:bundle];
+  }
+}
+
+- (void)loadFromBundle:(NSBundle *)bundle {
+//  NSString *pathToSvg = [bundle pathForResource:@"KVG-4eee" ofType:@"svg"];
+//  NSLog(@"%@", pathToSvg);
+  NSURL *urlToSvg = [bundle URLForResource:@"KVG-4eee" withExtension:@"svg"];
+  NSLog(@"%@", urlToSvg);
+
+  EWCStrokeDataParserDelegate *parserDelegate = [EWCStrokeDataParserDelegate new];
+  EWCStrokeDataLoader *loader = [[EWCStrokeDataLoader alloc] initWithDelegate:parserDelegate];
+  NSError *error = nil;
+  EWCStrokeData *strokeData = [loader loadFromURL:urlToSvg error:&error];
+
+  self.strokeOrderView.strokeData = strokeData;
 }
 
 

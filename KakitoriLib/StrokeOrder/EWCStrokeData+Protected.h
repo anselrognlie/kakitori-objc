@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addStroke:(EWCStroke *)stroke;
 
+- (void)setStrokeWidth:(double)width;
+
+- (void)setStrokeCapStyle:(EWCStrokeCapStyle)style;
+
+- (void)setStrokeJoinStyle:(EWCStrokeJoinStyle)style;
+
 @end
 
 NS_ASSUME_NONNULL_END

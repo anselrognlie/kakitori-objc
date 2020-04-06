@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD288C8B2437CBE8005FA176 /* KVG-4eee.svg in Resources */ = {isa = PBXBuildFile; fileRef = FD288C8A2437CBE8005FA176 /* KVG-4eee.svg */; };
+		FD288C8C2437D212005FA176 /* libKakitoriLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD349DF0242E716A00A6C1C3 /* libKakitoriLib.a */; };
+		FD288C8D2437D32C005FA176 /* EWCStrokeOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */; };
+		FD288C902437E139005FA176 /* EWCStrokeDataToBezierConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD288C8F2437E139005FA176 /* EWCStrokeDataToBezierConvertor.m */; };
+		FD288C93243A7595005FA176 /* EWCStrokeCapStyleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD288C92243A7595005FA176 /* EWCStrokeCapStyleConverter.m */; };
+		FD288C96243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD288C95243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m */; };
 		FD349DBA242D180400A6C1C3 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD349DB9242D180400A6C1C3 /* libOCMock.a */; };
 		FD349DCF242D303600A6C1C3 /* EWCStrokeDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD349DCE242D303600A6C1C3 /* EWCStrokeDataTests.m */; };
 		FD349DE6242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit in Resources */ = {isa = PBXBuildFile; fileRef = FD349DE0242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit */; };
@@ -90,6 +96,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD288C8A2437CBE8005FA176 /* KVG-4eee.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "KVG-4eee.svg"; sourceTree = "<group>"; };
+		FD288C8E2437E139005FA176 /* EWCStrokeDataToBezierConvertor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeDataToBezierConvertor.h; sourceTree = "<group>"; };
+		FD288C8F2437E139005FA176 /* EWCStrokeDataToBezierConvertor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeDataToBezierConvertor.m; sourceTree = "<group>"; };
+		FD288C91243A7595005FA176 /* EWCStrokeCapStyleConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeCapStyleConverter.h; sourceTree = "<group>"; };
+		FD288C92243A7595005FA176 /* EWCStrokeCapStyleConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeCapStyleConverter.m; sourceTree = "<group>"; };
+		FD288C94243A75A2005FA176 /* EWCStrokeJoinStyleConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeJoinStyleConverter.h; sourceTree = "<group>"; };
+		FD288C95243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeJoinStyleConverter.m; sourceTree = "<group>"; };
 		FD349DB9242D180400A6C1C3 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = deps/lib/libOCMock.a; sourceTree = "<group>"; };
 		FD349DBF242D1A1A00A6C1C3 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		FD349DC0242D1A1A00A6C1C3 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
@@ -173,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD288C8C2437D212005FA176 /* libKakitoriLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +209,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD288C872437CA42005FA176 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD288C8A2437CBE8005FA176 /* KVG-4eee.svg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FD349DB4242C2B2A00A6C1C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				FD3B0BF1242A87FD003AA2CB /* Kakitori.entitlements */,
+				FD288C872437CA42005FA176 /* Resources */,
 				FD3B0B592427EC47003AA2CB /* Controls */,
 				FD3B0B242427EAC6003AA2CB /* AppDelegate.h */,
 				FD3B0B252427EAC6003AA2CB /* AppDelegate.m */,
@@ -348,6 +371,10 @@
 			children = (
 				FD3B0B5B2427EE51003AA2CB /* EWCStrokeOrderView.h */,
 				FD3B0B5C2427EE51003AA2CB /* EWCStrokeOrderView.m */,
+				FD288C91243A7595005FA176 /* EWCStrokeCapStyleConverter.h */,
+				FD288C92243A7595005FA176 /* EWCStrokeCapStyleConverter.m */,
+				FD288C94243A75A2005FA176 /* EWCStrokeJoinStyleConverter.h */,
+				FD288C95243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m */,
 			);
 			path = StrokeOrderView;
 			sourceTree = "<group>";
@@ -386,6 +413,8 @@
 				FD3B0BDF242A8659003AA2CB /* EWCStrokePartTokenizer.m */,
 				FD349DD0242D870500A6C1C3 /* EWCStrokeDataLoader.h */,
 				FD349DD1242D870500A6C1C3 /* EWCStrokeDataLoader.m */,
+				FD288C8E2437E139005FA176 /* EWCStrokeDataToBezierConvertor.h */,
+				FD288C8F2437E139005FA176 /* EWCStrokeDataToBezierConvertor.m */,
 			);
 			path = StrokeOrder;
 			sourceTree = "<group>";
@@ -516,6 +545,7 @@
 			files = (
 				FD3B0B342427EAC8003AA2CB /* LaunchScreen.storyboard in Resources */,
 				FD3B0B312427EAC8003AA2CB /* Assets.xcassets in Resources */,
+				FD288C8B2437CBE8005FA176 /* KVG-4eee.svg in Resources */,
 				FD3B0B2F2427EAC6003AA2CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +595,7 @@
 				FD349E12242E7A7000A6C1C3 /* EWCStrokeDataError.m in Sources */,
 				FD349E13242E7A7000A6C1C3 /* EWCStrokeDataParserDelegate.h in Sources */,
 				FD349E14242E7A7000A6C1C3 /* EWCStrokeDataParserDelegate.m in Sources */,
+				FD288C902437E139005FA176 /* EWCStrokeDataToBezierConvertor.m in Sources */,
 				FD349E15242E7A7000A6C1C3 /* EWCStrokePart.h in Sources */,
 				FD349E16242E7A7000A6C1C3 /* EWCStrokePart.m in Sources */,
 				FD349E17242E7A7000A6C1C3 /* EWCStrokePartTokenizer.h in Sources */,
@@ -578,10 +609,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD288C8D2437D32C005FA176 /* EWCStrokeOrderView.m in Sources */,
 				FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */,
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
 				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
+				FD288C96243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m in Sources */,
 				FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */,
+				FD288C93243A7595005FA176 /* EWCStrokeCapStyleConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

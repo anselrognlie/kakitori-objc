@@ -11,7 +11,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class EWCStroke;
-@protocol EWCStrokeDataBuilder;
+@class UIBezierPath;
+
+typedef NS_ENUM(NSInteger, EWCStrokeCapStyle) {
+    EWCStrokeCapRound
+};
+
+typedef NS_ENUM(NSInteger, EWCStrokeJoinStyle) {
+    EWCStrokeJoinRound
+};
 
 @interface EWCStrokeData : NSObject
 
@@ -20,7 +28,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, nonatomic) double viewRight;
 @property (readonly, nonatomic) double viewBottom;
 
+@property (readonly, nonatomic) double strokeWidth;
+@property (readonly, nonatomic) EWCStrokeCapStyle strokeCapStyle;
+@property (readonly, nonatomic) EWCStrokeJoinStyle strokeJoinStyle;
+
 @property (readonly) NSArray<EWCStroke *> *strokes;
+
+- (NSArray<UIBezierPath *> *)convertToPoints;
 
 @end
 

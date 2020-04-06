@@ -10,9 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class EWCStrokeData;
+
 @interface EWCStrokeOrderView : UIView
 
-@property NSString *characterData;
+//@property NSString *characterData;
+@property (nonatomic) EWCStrokeData *strokeData;
 
 @end
 

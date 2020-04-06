@@ -14,12 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EWCCurveStrokePart : EWCStrokePart
 
 @property (readonly, getter=isRelative) BOOL relative;
-@property (readonly) int xcp1;
-@property (readonly) int ycp1;
-@property (readonly) int xcp2;
-@property (readonly) int ycp2;
-@property (readonly) int x2;
-@property (readonly) int y2;
+@property (readonly) double xcp1;
+@property (readonly) double ycp1;
+@property (readonly) double xcp2;
+@property (readonly) double ycp2;
+@property (readonly) double x2;
+@property (readonly) double y2;
 
 - (instancetype)initWithXcp1:(double)xcp1 ycp1:(double)ycp1
   xcp2:(double)xcp2 ycp2:(double)ycp2

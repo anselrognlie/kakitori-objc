@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithDelegate:(EWCStrokeDataParserDelegate *)delegate;
 - (EWCStrokeData *)loadFromString:(NSString *)string error:(NSError **)error;
+- (EWCStrokeData *)loadFromURL:(NSURL *)url error:(NSError **)error;
 
 @end
 

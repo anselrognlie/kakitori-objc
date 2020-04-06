@@ -24,6 +24,7 @@
     _ycp2 = ycp2;
     _x2 = x2;
     _y2 = y2;
+    _relative = relative;
   }
 
   return self;

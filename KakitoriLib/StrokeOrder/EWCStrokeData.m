@@ -9,6 +9,8 @@
 #import "EWCStrokeData.h"
 #import "EWCStrokeData+Protected.h"
 
+#import "EWCStrokeDataToBezierConvertor.h"
+
 @implementation EWCStrokeData {
   NSMutableArray<EWCStroke *> *_strokes;
 }
@@ -42,6 +44,24 @@
   _viewTop = top;
   _viewRight = right;
   _viewBottom = bottom;
+}
+
+- (NSArray<UIBezierPath *> *)convertToPoints {
+  EWCStrokeDataToBezierConvertor *convertor =
+    [EWCStrokeDataToBezierConvertor new];
+  return [convertor convertStrokes:_strokes];
+}
+
+- (void)setStrokeWidth:(double)width {
+  _strokeWidth = width;
+}
+
+- (void)setStrokeCapStyle:(EWCStrokeCapStyle)style {
+  _strokeCapStyle = style;
+}
+
+- (void)setStrokeJoinStyle:(EWCStrokeJoinStyle)style {
+  _strokeJoinStyle = style;
 }
 
 @end
