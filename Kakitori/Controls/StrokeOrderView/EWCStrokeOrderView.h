@@ -12,12 +12,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class EWCStrokeData;
 
+typedef NS_ENUM(NSInteger, EWCStrokeOrderViewDisplayMode) {
+    EWCStrokeOrderViewDisplayModePlain,
+    EWCStrokeOrderViewDisplayModeAnimate,
+    EWCStrokeOrderViewDisplayModePlainWithLabels,
+    EWCStrokeOrderViewDisplayModeAnimateWithLabels,
+};
+
+extern const NSInteger EWCStrokeOrderViewDisplayModeCount;
+
 @interface EWCStrokeOrderView : UIControl
 
 //@property NSString *characterData;
 @property (nonatomic) EWCStrokeData *strokeData;
-
-- (void)startAnimation;
+@property (nonatomic) EWCStrokeOrderViewDisplayMode displayMode;
 
 @end
 

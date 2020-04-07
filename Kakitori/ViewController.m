@@ -19,16 +19,22 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
 @end
 
-@implementation ViewController
+@implementation ViewController {
+  EWCStrokeOrderViewDisplayMode _displayMode;
+}
 
 - (IBAction)handleTap:(id)sender {
-  NSLog(@"%@", @"tapped");
-  [self.strokeOrderView startAnimation];
+//  NSLog(@"%@", @"tapped");
+
+  _displayMode = (_displayMode + 1) % EWCStrokeOrderViewDisplayModeCount;
+  self.strokeOrderView.displayMode = _displayMode;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self loadResources];
+  _displayMode = EWCStrokeOrderViewDisplayModePlain;
+  self.strokeOrderView.displayMode = _displayMode;
 }
 
 - (void)loadResources {

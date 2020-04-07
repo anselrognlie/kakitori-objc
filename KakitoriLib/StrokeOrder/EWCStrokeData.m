@@ -25,6 +25,7 @@
     _viewRight = 0;
     _viewBottom = 0;
     _strokes = [NSMutableArray<EWCStroke *> new];
+    _numbers = [NSMutableArray<EWCStrokeNumber *> new];
   }
   return self;
 }
