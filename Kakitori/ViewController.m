@@ -41,7 +41,8 @@
 - (void)loadFromBundle:(NSBundle *)bundle {
 //  NSString *pathToSvg = [bundle pathForResource:@"KVG-4eee" ofType:@"svg"];
 //  NSLog(@"%@", pathToSvg);
-  NSURL *urlToSvg = [bundle URLForResource:@"KVG-4eee" withExtension:@"svg"];
+//  NSURL *urlToSvg = [bundle URLForResource:@"KVG-4eee" withExtension:@"svg"];
+  NSURL *urlToSvg = [bundle URLForResource:@"KVG-09b31" withExtension:@"svg"];
   NSLog(@"%@", urlToSvg);
 
   EWCStrokeDataParserDelegate *parserDelegate = [EWCStrokeDataParserDelegate new];
