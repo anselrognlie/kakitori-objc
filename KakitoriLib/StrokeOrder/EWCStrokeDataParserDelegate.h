@@ -27,6 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
   qualifiedName:(nullable NSString *)qName
   attributes:(NSDictionary<NSString *, NSString *> *)attributeDict;
 
+- (void)parser:(NSXMLParser *)parser
+  didEndElement:(NSString *)elementName
+  namespaceURI:(nullable NSString *)namespaceURI
+  qualifiedName:(nullable NSString *)qName;
+
+- (void)parser:(NSXMLParser *)parser
+  foundCharacters:(NSString *)string;
+
 @end
 
 NS_ASSUME_NONNULL_END

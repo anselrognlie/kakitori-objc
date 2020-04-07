@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class EWCStroke;
+@class EWCStrokeNumber;
 @class UIBezierPath;
 
 typedef NS_ENUM(NSInteger, EWCStrokeCapStyle) {
@@ -29,10 +30,13 @@ typedef NS_ENUM(NSInteger, EWCStrokeJoinStyle) {
 @property (readonly, nonatomic) double viewBottom;
 
 @property (readonly, nonatomic) double strokeWidth;
+@property (readonly, nonatomic) double fontSize;
 @property (readonly, nonatomic) EWCStrokeCapStyle strokeCapStyle;
 @property (readonly, nonatomic) EWCStrokeJoinStyle strokeJoinStyle;
 
 @property (readonly) NSArray<EWCStroke *> *strokes;
+
+@property (readonly) NSArray<EWCStrokeNumber *> *numbers;
 
 - (NSArray<UIBezierPath *> *)convertToPoints;
 

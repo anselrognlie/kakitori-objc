@@ -13,6 +13,8 @@
 		FD288C902437E139005FA176 /* EWCStrokeDataToBezierConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD288C8F2437E139005FA176 /* EWCStrokeDataToBezierConvertor.m */; };
 		FD288C93243A7595005FA176 /* EWCStrokeCapStyleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD288C92243A7595005FA176 /* EWCStrokeCapStyleConverter.m */; };
 		FD288C96243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD288C95243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m */; };
+		FD288C98243BBE9E005FA176 /* KVG-09b31.svg in Resources */ = {isa = PBXBuildFile; fileRef = FD288C97243BBE9E005FA176 /* KVG-09b31.svg */; };
+		FD288C9B243BFDC5005FA176 /* EWCStrokeNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = FD288C9A243BFDC5005FA176 /* EWCStrokeNumber.m */; };
 		FD349DBA242D180400A6C1C3 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD349DB9242D180400A6C1C3 /* libOCMock.a */; };
 		FD349DCF242D303600A6C1C3 /* EWCStrokeDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD349DCE242D303600A6C1C3 /* EWCStrokeDataTests.m */; };
 		FD349DE6242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit in Resources */ = {isa = PBXBuildFile; fileRef = FD349DE0242E6CFB00A6C1C3 /* KVG-4eee-view-error.strlit */; };
@@ -103,6 +105,9 @@
 		FD288C92243A7595005FA176 /* EWCStrokeCapStyleConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeCapStyleConverter.m; sourceTree = "<group>"; };
 		FD288C94243A75A2005FA176 /* EWCStrokeJoinStyleConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeJoinStyleConverter.h; sourceTree = "<group>"; };
 		FD288C95243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeJoinStyleConverter.m; sourceTree = "<group>"; };
+		FD288C97243BBE9E005FA176 /* KVG-09b31.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "KVG-09b31.svg"; sourceTree = "<group>"; };
+		FD288C99243BFDC5005FA176 /* EWCStrokeNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeNumber.h; sourceTree = "<group>"; };
+		FD288C9A243BFDC5005FA176 /* EWCStrokeNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeNumber.m; sourceTree = "<group>"; };
 		FD349DB9242D180400A6C1C3 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = deps/lib/libOCMock.a; sourceTree = "<group>"; };
 		FD349DBF242D1A1A00A6C1C3 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		FD349DC0242D1A1A00A6C1C3 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
@@ -212,6 +217,7 @@
 		FD288C872437CA42005FA176 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FD288C97243BBE9E005FA176 /* KVG-09b31.svg */,
 				FD288C8A2437CBE8005FA176 /* KVG-4eee.svg */,
 			);
 			path = Resources;
@@ -415,6 +421,8 @@
 				FD349DD1242D870500A6C1C3 /* EWCStrokeDataLoader.m */,
 				FD288C8E2437E139005FA176 /* EWCStrokeDataToBezierConvertor.h */,
 				FD288C8F2437E139005FA176 /* EWCStrokeDataToBezierConvertor.m */,
+				FD288C99243BFDC5005FA176 /* EWCStrokeNumber.h */,
+				FD288C9A243BFDC5005FA176 /* EWCStrokeNumber.m */,
 			);
 			path = StrokeOrder;
 			sourceTree = "<group>";
@@ -547,6 +555,7 @@
 				FD3B0B312427EAC8003AA2CB /* Assets.xcassets in Resources */,
 				FD288C8B2437CBE8005FA176 /* KVG-4eee.svg in Resources */,
 				FD3B0B2F2427EAC6003AA2CB /* Main.storyboard in Resources */,
+				FD288C98243BBE9E005FA176 /* KVG-09b31.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +594,7 @@
 				FD349E08242E7A7000A6C1C3 /* EWCCurveStrokePart.h in Sources */,
 				FD349E09242E7A7000A6C1C3 /* EWCCurveStrokePart.m in Sources */,
 				FD349E0A242E7A7000A6C1C3 /* EWCMoveStrokePart.h in Sources */,
+				FD288C9B243BFDC5005FA176 /* EWCStrokeNumber.m in Sources */,
 				FD349E0B242E7A7000A6C1C3 /* EWCMoveStrokePart.m in Sources */,
 				FD349E0C242E7A7000A6C1C3 /* EWCStroke.h in Sources */,
 				FD349E0D242E7A7000A6C1C3 /* EWCStroke.m in Sources */,

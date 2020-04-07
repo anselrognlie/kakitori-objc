@@ -15,6 +15,7 @@
 #import "EWCMoveStrokePart.h"
 #import "EWCCurveStrokePart.h"
 #import "EWCStroke.h"
+#import "EWCStrokeNumber.h"
 
 static NSString * const kEWCSvgTag = @"svg";
 static NSString * const kEWCViewBoxAttr = @"viewBox";
@@ -24,20 +25,28 @@ static NSString * const kEWCPathDataAttr = @"d";
 static NSString * const kEWCGroupTag = @"g";
 static NSString * const kEWCIdAttr = @"id";
 static NSString * const kEWCStyleAttr = @"style";
+static NSString * const kEWCTextTag = @"text";
+static NSString * const kEWCTransformAttr = @"transform";
+static NSString * const kEWCMatrixOp = @"matrix(";
 
 static NSString * const kEWCStyleStrokeWidthAttr = @"stroke-width";
 static NSString * const kEWCStyleStrokeLineCapAttr = @"stroke-linecap";
 static NSString * const kEWCStyleStrokeLineJoinAttr = @"stroke-linejoin";
 
+static NSString * const kEWCStyleFontSizeAttr = @"font-size";
+
 static NSString * const kEWCStyleStrokeLineJoinRoundStyle = @"round";
 static NSString * const kEWCStyleStrokeLineCapRoundStyle = @"round";
 
-static NSString * const kEWCKvgId = @"kvg:StrokePaths_";
-static const int kEWCKvgIdIndexEnd = 16;
+static NSString * const kEWCKvgPathsId = @"kvg:StrokePaths_";
+static NSString * const kEWCKvgNumbersId = @"kvg:StrokeNumbers_";
 
 static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
 
-@implementation EWCStrokeDataParserDelegate
+@implementation EWCStrokeDataParserDelegate {
+  NSMutableString *_textChars;
+  double _a, _b, _c, _d, _e, _f;
+}
 
 - (instancetype)init {
   self = [super init];
@@ -69,6 +78,39 @@ static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
   }
 }
 
+- (void)parser:(NSXMLParser *)parser
+  didEndElement:(NSString *)elementName
+  namespaceURI:(nullable NSString *)namespaceURI
+  qualifiedName:(nullable NSString *)qName {
+
+  BOOL success = YES;
+
+  success = [self parseEndStateWithElement:elementName];
+
+  if (! success) {
+    [parser abortParsing];
+  }
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+  [_textChars appendString:string];
+}
+
+- (BOOL)parseEndStateWithElement:(NSString *)elementName {
+
+  if ([kEWCTextTag isEqualToString:elementName]) {
+    EWCStrokeNumber *number = [EWCStrokeNumber
+      strokeNumberWithText:_textChars
+      transform:_a :_b :_c :_d :_e :_f];
+
+    _textChars = nil;
+
+    [_strokeData addStrokeNumber:number];
+  }
+
+  return YES;
+}
+
 - (BOOL)parseStartStateWithElement:(NSString *)elementName
   attributes:(NSDictionary<NSString *, NSString *> *)attributeDict {
 
@@ -78,6 +120,8 @@ static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
     return [self parsePath:attributeDict[kEWCPathDataAttr]];
   } else if ([kEWCGroupTag isEqualToString:elementName]) {
     return [self parseGroup:attributeDict];
+  } else if ([kEWCTextTag isEqualToString:elementName]) {
+    return [self parseText:attributeDict];
   }
 
   return YES;
@@ -87,20 +131,58 @@ static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
   NSString *idStr = attributeDict[kEWCIdAttr];
   if (idStr == nil) { return YES; }
 
-  if (idStr.length < kEWCKvgIdIndexEnd) { return YES; }
-
-  if (! [[idStr substringToIndex:kEWCKvgIdIndexEnd] isEqualToString:kEWCKvgId]) {
-    return YES;
+  if ([idStr hasPrefix:kEWCKvgPathsId]) {
+    return [self parsePathsGroupAttributes:attributeDict];
+  } else if ([idStr hasPrefix:kEWCKvgNumbersId]) {
+    return [self parseNumbersGroupAttributes:attributeDict];
   }
 
-  NSString *style = attributeDict[kEWCStyleAttr];
-  if (style == nil) { return YES; }
-
-  NSDictionary<NSString *, NSString *> *styleAttr = parseAttributes(style);
-  return [self parseStyleAttributes:styleAttr];
+  return YES;
 }
 
-- (BOOL)parseStyleAttributes:(NSDictionary<NSString *, NSString *> *)styleAttr {
+- (BOOL)parseText:(NSDictionary<NSString *, NSString *> *)attributeDict {
+  NSString *transform = attributeDict[kEWCTransformAttr];
+  if (transform) {
+    if ([transform hasPrefix:kEWCMatrixOp]) {
+      NSString *numbers = [transform substringFromIndex:kEWCMatrixOp.length];
+      NSScanner *scanner = [NSScanner scannerWithString:numbers];
+      double *t[] = { &_a, &_b, &_c, &_d, &_e, &_f };
+      for (int i = 0; i < sizeof(t) / sizeof(*t); ++i) {
+        BOOL parsed = [scanner scanDouble:t[i]];
+        if (! parsed) {
+          return NO;
+        }
+      }
+
+      _textChars = [NSMutableString new];
+    } else {
+      return NO;
+    }
+  } else {
+    return NO;
+  }
+
+  return YES;
+}
+
+- (BOOL)parsePathsGroupAttributes:(NSDictionary<NSString *, NSString *> *)attributes {
+  NSString *style = attributes[kEWCStyleAttr];
+  if (style == nil) { return NO; }
+
+  NSDictionary<NSString *, NSString *> *styleAttr = parseAttributes(style);
+  return [self parsePathsStyleAttributes:styleAttr];
+}
+
+- (BOOL)parseNumbersGroupAttributes:(NSDictionary<NSString *, NSString *> *)attributes {
+  NSString *style = attributes[kEWCStyleAttr];
+  if (style == nil) { return NO; }
+
+  NSDictionary<NSString *, NSString *> *styleAttr = parseAttributes(style);
+  return [self parseNumbersStyleAttributes:styleAttr];
+}
+
+
+- (BOOL)parsePathsStyleAttributes:(NSDictionary<NSString *, NSString *> *)styleAttr {
 
   NSString *strokeWidthStr = styleAttr[kEWCStyleStrokeWidthAttr];
   if (strokeWidthStr) {
@@ -128,6 +210,21 @@ static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
     } else {
       return NO;
     }
+  }
+
+  return YES;
+}
+
+- (BOOL)parseNumbersStyleAttributes:(NSDictionary<NSString *, NSString *> *)styleAttr {
+
+  NSString *fontSizeStr = styleAttr[kEWCStyleFontSizeAttr];
+  if (fontSizeStr) {
+    NSScanner *scanner = [NSScanner scannerWithString:fontSizeStr];
+    double result;
+    BOOL parsed = [scanner scanDouble:&result];
+    if (! parsed) { return NO; }
+
+    [_strokeData setFontSize:result];
   }
 
   return YES;

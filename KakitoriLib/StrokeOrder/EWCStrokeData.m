@@ -10,9 +10,11 @@
 #import "EWCStrokeData+Protected.h"
 
 #import "EWCStrokeDataToBezierConvertor.h"
+#import "EWCStrokeNumber.h"
 
 @implementation EWCStrokeData {
   NSMutableArray<EWCStroke *> *_strokes;
+  NSMutableArray<EWCStrokeNumber *> *_numbers;
 }
 
 - (instancetype)init {
@@ -29,6 +31,10 @@
 
 - (NSArray<EWCStroke *> *)strokes {
   return _strokes;
+}
+
+- (NSArray<EWCStrokeNumber *> *)numbers {
+  return _numbers;
 }
 
 - (void)addStroke:(EWCStroke *)stroke {
@@ -62,6 +68,14 @@
 
 - (void)setStrokeJoinStyle:(EWCStrokeJoinStyle)style {
   _strokeJoinStyle = style;
+}
+
+- (void)setFontSize:(double)fontSize {
+  _fontSize = fontSize;
+}
+
+- (void)addStrokeNumber:(EWCStrokeNumber *)number {
+  [_numbers addObject:number];
 }
 
 @end
