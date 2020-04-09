@@ -14,17 +14,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, EWCStrokeOrderViewDisplayMode) {
     EWCStrokeOrderViewDisplayModePlain,
+    EWCStrokeOrderViewDisplayModeDrawn,
     EWCStrokeOrderViewDisplayModeAnimate,
-    EWCStrokeOrderViewDisplayModePlainWithLabels,
+    EWCStrokeOrderViewDisplayModeDrawnWithLabels,
     EWCStrokeOrderViewDisplayModeAnimateWithLabels,
 };
 
 extern const NSInteger EWCStrokeOrderViewDisplayModeCount;
 
-@interface EWCStrokeOrderView : UIControl
+@interface EWCStrokeOrderView : UIView
 
-//@property NSString *characterData;
 @property (nonatomic) EWCStrokeData *strokeData;
+@property (nonatomic) NSString *glyph;
 @property (nonatomic) EWCStrokeOrderViewDisplayMode displayMode;
 
 @end

@@ -59,6 +59,7 @@
 		FD3B0B372427EAC8003AA2CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B362427EAC8003AA2CB /* main.m */; };
 		FD3B0B412427EAC8003AA2CB /* KakitoriTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */; };
 		FD3B0B4C2427EAC8003AA2CB /* KakitoriUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */; };
+		FD941111243E81050062FE95 /* EWCGlyphLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD941110243E81050062FE95 /* EWCGlyphLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,9 @@
 		FD3B0BF1242A87FD003AA2CB /* Kakitori.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kakitori.entitlements; sourceTree = "<group>"; };
 		FD3B0BF2242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCConsoleLogStatusWriter.h; sourceTree = "<group>"; };
 		FD3B0BF3242ADBC5003AA2CB /* EWCConsoleLogStatusWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCConsoleLogStatusWriter.m; sourceTree = "<group>"; };
+		FD94110D243E7EEE0062FE95 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		FD94110F243E81050062FE95 /* EWCGlyphLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCGlyphLayer.h; sourceTree = "<group>"; };
+		FD941110243E81050062FE95 /* EWCGlyphLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCGlyphLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,7 @@
 		FD349DB4242C2B2A00A6C1C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD94110D243E7EEE0062FE95 /* CoreText.framework */,
 				FD349DB9242D180400A6C1C3 /* libOCMock.a */,
 			);
 			name = Frameworks;
@@ -381,6 +386,8 @@
 				FD288C92243A7595005FA176 /* EWCStrokeCapStyleConverter.m */,
 				FD288C94243A75A2005FA176 /* EWCStrokeJoinStyleConverter.h */,
 				FD288C95243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m */,
+				FD94110F243E81050062FE95 /* EWCGlyphLayer.h */,
+				FD941110243E81050062FE95 /* EWCGlyphLayer.m */,
 			);
 			path = StrokeOrderView;
 			sourceTree = "<group>";
@@ -624,6 +631,7 @@
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
 				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
 				FD288C96243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m in Sources */,
+				FD941111243E81050062FE95 /* EWCGlyphLayer.m in Sources */,
 				FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */,
 				FD288C93243A7595005FA176 /* EWCStrokeCapStyleConverter.m in Sources */,
 			);
