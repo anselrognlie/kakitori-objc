@@ -27,6 +27,7 @@ extern const NSInteger EWCStrokeOrderViewDisplayModeCount;
 @property (nonatomic) EWCStrokeData *strokeData;
 @property (nonatomic) NSString *glyph;
 @property (nonatomic) EWCStrokeOrderViewDisplayMode displayMode;
+@property (nonatomic) BOOL preferSerifs;
 
 @end
 

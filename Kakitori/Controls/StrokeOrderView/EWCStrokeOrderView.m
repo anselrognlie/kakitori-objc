@@ -75,6 +75,7 @@ static const double kEWCTimeOffsetFromLabel = 0.5;
   _needsLayout = YES;
   _showStrokeCount = NO;
   _showGlyph = YES;
+  _preferSerifs = YES;
   self.displayMode = EWCStrokeOrderViewDisplayModePlain;
 }
 
@@ -133,6 +134,13 @@ static const double kEWCTimeOffsetFromLabel = 0.5;
   for (CATextLayer *label in _labelLayers) {
     label.hidden = ! _showStrokeCount;
   }
+}
+
+- (void)setPreferSerifs:(BOOL)preferSerifs {
+  _preferSerifs = preferSerifs;
+  _needsLayout = YES;
+
+  [self setNeedsLayout];
 }
 
 - (void)setShowGlyph:(BOOL)showGlyph {
@@ -258,44 +266,6 @@ static const double kEWCTimeOffsetFromLabel = 0.5;
   _labelLayers = labels;
 }
 
-//- (void)createGlyphLayer {
-//  NSString *glyph = _strokeData ? _strokeData.glyph : _glyph;
-//
-//  double fontSize = self.layer.bounds.size.height * kEWCGlyphScaleFactor;
-//  UIFont *font = [UIFont systemFontOfSize:fontSize];
-//
-//  UIFontDescriptor *preferedDescriptor = [[font fontDescriptor]
-//    fontDescriptorWithDesign:UIFontDescriptorSystemDesignSerif];
-//  if (preferedDescriptor) {
-//    font = [UIFont fontWithDescriptor:preferedDescriptor size:fontSize];
-//  }
-//
-//  NSMutableParagraphStyle *paragraph = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-////  paragraph.alignment = NSTextAlignmentCenter;
-//  paragraph.lineSpacing = 0;
-//
-//  NSDictionary<NSString *, id> *myAttributes = @{
-//    NSFontAttributeName: font, // font
-//    NSParagraphStyleAttributeName: paragraph,
-//  };
-//  NSAttributedString *myAttributedString = [[NSAttributedString alloc]
-//    initWithString:glyph attributes:myAttributes];
-//
-//  CATextLayer *layer = [CATextLayer new];
-//  layer.string = myAttributedString;
-//  layer.borderColor = [UIColor redColor].CGColor;
-//  layer.borderWidth = 2;
-//  layer.frame = self.layer.bounds;
-//  layer.hidden = ! _showGlyph;
-//  layer.alignmentMode = kCAAlignmentCenter;
-//  layer.masksToBounds = YES;
-//  layer.backgroundColor = [UIColor blueColor].CGColor;
-//
-//  [self.layer addSublayer:layer];
-//
-//  _glyphLayer = layer;
-//}
-
 - (void)createGlyphLayer {
   NSString *glyph = _strokeData ? _strokeData.glyph : _glyph;
 
@@ -307,16 +277,11 @@ static const double kEWCTimeOffsetFromLabel = 0.5;
   EWCGlyphLayer *layer = [EWCGlyphLayer new];
   layer.glyph = glyph;
   layer.fontSize = fontSize;
+  layer.preferSerifs = _preferSerifs;
   layer.frame = self.layer.bounds;
   layer.hidden = ! _showGlyph;
   layer.masksToBounds = YES;
   layer.affineTransform = t;
-
-//  layer.string = myAttributedString;
-//  layer.borderColor = [UIColor redColor].CGColor;
-//  layer.borderWidth = 2;
-//  layer.alignmentMode = kCAAlignmentCenter;
-//  layer.backgroundColor = [UIColor blueColor].CGColor;
 
   [self.layer addSublayer:layer];
   [layer setNeedsDisplay];

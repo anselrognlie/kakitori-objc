@@ -54,6 +54,7 @@
   NSError *error = nil;
   EWCStrokeData *strokeData = [loader loadFromURL:urlToSvg error:&error];
 
+//  self.strokeOrderView.preferSerifs = NO;
   self.strokeOrderView.strokeData = strokeData;
 //  self.strokeOrderView.glyph = @"\u9f98";
 }

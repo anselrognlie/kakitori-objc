@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSString *glyph;
 @property (nonatomic) double fontSize;
+@property (nonatomic) BOOL preferSerifs;
 
 - (void)drawInContext:(CGContextRef)ctx;
 

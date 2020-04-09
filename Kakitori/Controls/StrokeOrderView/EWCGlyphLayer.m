@@ -10,19 +10,30 @@
 
 #import <CoreText/CoreText.h>
 
+static const double kEWCMarginScaleFactor = 0.2;
+
 @implementation EWCGlyphLayer
 
-- (void)drawInContext:(CGContextRef)ctx {
+- (UIFont *)findPreferedFont {
 
   UIFont *font = [UIFont systemFontOfSize:_fontSize];
 
-  UIFontDescriptor *preferedDescriptor = [[font fontDescriptor]
-    fontDescriptorWithDesign:UIFontDescriptorSystemDesignSerif];
-  if (preferedDescriptor) {
-    UIFont *preferedFont = [UIFont fontWithDescriptor:preferedDescriptor
-      size:_fontSize];
-    if (preferedFont) { font = preferedFont; }
+  if (_preferSerifs) {
+    UIFontDescriptor *preferedDescriptor = [[font fontDescriptor]
+      fontDescriptorWithDesign:UIFontDescriptorSystemDesignSerif];
+    if (preferedDescriptor) {
+      UIFont *preferedFont = [UIFont fontWithDescriptor:preferedDescriptor
+        size:_fontSize];
+      if (preferedFont) { font = preferedFont; }
+    }
   }
+
+  return font;
+}
+
+- (void)drawInContext:(CGContextRef)ctx {
+
+  UIFont *font = [self findPreferedFont];
 
   NSDictionary<NSString *, id> *attr = @{
     NSFontAttributeName: font, // font
@@ -30,16 +41,16 @@
   NSAttributedString *attrStr = [[NSAttributedString alloc]
     initWithString:_glyph attributes:attr];
 
-  CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef)attrStr);
+  CTLineRef line = CTLineCreateWithAttributedString(
+    (CFAttributedStringRef)attrStr);
   CGFloat ascent, descent, leading;
   double lineWidth = CTLineGetTypographicBounds(
     line, &ascent, &descent, &leading);
 
-  double xPos = fabs((self.bounds.size.width - lineWidth) / 2.0);
-  double yPos = fabs((self.bounds.size.height - (ascent + descent)) / 2.0);
+  double centerX = fabs((self.bounds.size.width - lineWidth) / 2.0);
 
   // Set text position and draw the line into the graphics context
-  CGContextSetTextPosition(ctx, xPos, 0.2 * _fontSize);
+  CGContextSetTextPosition(ctx, centerX, kEWCMarginScaleFactor * _fontSize);
   CTLineDraw(line, ctx);
   CFRelease(line);
 }
