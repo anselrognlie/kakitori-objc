@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFontSize:(double)fontSize;
 
+- (void)setGlyph:(NSString *)glyph;
+
 - (void)setStrokeCapStyle:(EWCStrokeCapStyle)style;
 
 - (void)setStrokeJoinStyle:(EWCStrokeJoinStyle)style;

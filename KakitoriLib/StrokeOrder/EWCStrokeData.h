@@ -34,6 +34,8 @@ typedef NS_ENUM(NSInteger, EWCStrokeJoinStyle) {
 @property (readonly, nonatomic) EWCStrokeCapStyle strokeCapStyle;
 @property (readonly, nonatomic) EWCStrokeJoinStyle strokeJoinStyle;
 
+@property (readonly, nonatomic) NSString *glyph;
+
 @property (readonly) NSArray<EWCStroke *> *strokes;
 
 @property (readonly) NSArray<EWCStrokeNumber *> *numbers;

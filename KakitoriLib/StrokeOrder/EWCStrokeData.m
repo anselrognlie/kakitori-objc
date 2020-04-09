@@ -71,6 +71,10 @@
   _strokeJoinStyle = style;
 }
 
+- (void)setGlyph:(NSString *)glyph {
+  _glyph = glyph;
+}
+
 - (void)setFontSize:(double)fontSize {
   _fontSize = fontSize;
 }

@@ -25,6 +25,7 @@ static NSString * const kEWCPathDataAttr = @"d";
 static NSString * const kEWCGroupTag = @"g";
 static NSString * const kEWCIdAttr = @"id";
 static NSString * const kEWCStyleAttr = @"style";
+static NSString * const kEWCElementAttr = @"kvg:element";
 static NSString * const kEWCTextTag = @"text";
 static NSString * const kEWCTransformAttr = @"transform";
 static NSString * const kEWCMatrixOp = @"matrix(";
@@ -46,6 +47,7 @@ static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
 @implementation EWCStrokeDataParserDelegate {
   NSMutableString *_textChars;
   double _a, _b, _c, _d, _e, _f;
+  NSString *_glyph;
 }
 
 - (instancetype)init {
@@ -58,7 +60,10 @@ static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
 
 - (void)reset {
   _strokeData = [EWCStrokeData new];
+  _textChars = nil;
   _lastError = nil;
+  _glyph = nil;
+  _a = _b = _c = _d = _e = _f = 0;
 }
 
 - (void)parser:(NSXMLParser *)parser
@@ -135,6 +140,11 @@ static NSDictionary<NSString *, NSString *> *parseAttributes(NSString *attr);
     return [self parsePathsGroupAttributes:attributeDict];
   } else if ([idStr hasPrefix:kEWCKvgNumbersId]) {
     return [self parseNumbersGroupAttributes:attributeDict];
+  } else if (attributeDict[kEWCElementAttr] != nil) {
+    if (_glyph == nil) {
+      _glyph = attributeDict[kEWCElementAttr];
+      _strokeData.glyph = _glyph;
+    }
   }
 
   return YES;
