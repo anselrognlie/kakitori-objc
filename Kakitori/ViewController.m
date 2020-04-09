@@ -15,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet EWCStrokeOrderView *strokeOrderView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomMargin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightMargin;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftMargin;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
 @end
 
 @implementation ViewController {
@@ -57,18 +55,19 @@
   EWCStrokeData *strokeData = [loader loadFromURL:urlToSvg error:&error];
 
   self.strokeOrderView.strokeData = strokeData;
+//  self.strokeOrderView.glyph = @"\u9f98";
 }
 
-- (void)viewWillLayoutSubviews {
+- (void)viewDidLayoutSubviews {
   CGRect viewFrame = self.view.frame;
   if (viewFrame.size.width >= viewFrame.size.height) {
     // wider
-    self.rightMargin.active = NO;
-    self.bottomMargin.active = YES;
+    [self.rightMargin setActive:NO];
+    [self.bottomMargin setActive:YES];
   } else {
     // taller
-    self.bottomMargin.active = NO;
-    self.leftMargin.active = YES;
+    [self.bottomMargin setActive:NO];
+    [self.rightMargin setActive:YES];
   }
 }
 

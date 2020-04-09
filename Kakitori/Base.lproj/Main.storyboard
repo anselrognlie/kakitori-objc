@@ -48,10 +48,8 @@
                     </view>
                     <connections>
                         <outlet property="bottomMargin" destination="hRr-Di-hib" id="wND-le-gtc"/>
-                        <outlet property="leftMargin" destination="7N8-qT-Nhb" id="oOi-be-NQX"/>
                         <outlet property="rightMargin" destination="tW6-h2-mJC" id="SKP-IW-iPz"/>
                         <outlet property="strokeOrderView" destination="jms-Yz-3gy" id="gtf-CY-rHp"/>
-                        <outlet property="topMargin" destination="Xnm-WO-Y6C" id="vpc-v2-XLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
