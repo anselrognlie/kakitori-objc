@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction) fromSegue:(UIStoryboardSegue*)unwindSegue;
 
 @end
 

@@ -60,6 +60,7 @@
 		FD3B0B412427EAC8003AA2CB /* KakitoriTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B402427EAC8003AA2CB /* KakitoriTests.m */; };
 		FD3B0B4C2427EAC8003AA2CB /* KakitoriUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */; };
 		FD941111243E81050062FE95 /* EWCGlyphLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD941110243E81050062FE95 /* EWCGlyphLayer.m */; };
+		FD9411142444CD100062FE95 /* EWCDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9411132444CD100062FE95 /* EWCDrawViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +182,8 @@
 		FD94110D243E7EEE0062FE95 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		FD94110F243E81050062FE95 /* EWCGlyphLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCGlyphLayer.h; sourceTree = "<group>"; };
 		FD941110243E81050062FE95 /* EWCGlyphLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCGlyphLayer.m; sourceTree = "<group>"; };
+		FD9411122444CD100062FE95 /* EWCDrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCDrawViewController.h; sourceTree = "<group>"; };
+		FD9411132444CD100062FE95 /* EWCDrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCDrawViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +345,8 @@
 				FD3B0B322427EAC8003AA2CB /* LaunchScreen.storyboard */,
 				FD3B0B352427EAC8003AA2CB /* Info.plist */,
 				FD3B0B362427EAC8003AA2CB /* main.m */,
+				FD9411122444CD100062FE95 /* EWCDrawViewController.h */,
+				FD9411132444CD100062FE95 /* EWCDrawViewController.m */,
 			);
 			path = Kakitori;
 			sourceTree = "<group>";
@@ -626,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9411142444CD100062FE95 /* EWCDrawViewController.m in Sources */,
 				FD288C8D2437D32C005FA176 /* EWCStrokeOrderView.m in Sources */,
 				FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */,
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
