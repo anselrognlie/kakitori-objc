@@ -7,9 +7,10 @@
 //
 
 #import "EWCDrawViewController.h"
+#import "EWCStrokeInputView.h"
 
 @interface EWCDrawViewController ()
-@property (weak, nonatomic) IBOutlet UIView *strokeView;
+@property (weak, nonatomic) IBOutlet EWCStrokeInputView *strokeView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topMargin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftMargin;
 @end

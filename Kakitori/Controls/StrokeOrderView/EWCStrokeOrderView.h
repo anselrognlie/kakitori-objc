@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, EWCStrokeOrderViewDisplayMode) {
 
 extern const NSInteger EWCStrokeOrderViewDisplayModeCount;
 
+IB_DESIGNABLE
 @interface EWCStrokeOrderView : UIView
 
 @property (nonatomic) EWCStrokeData *strokeData;

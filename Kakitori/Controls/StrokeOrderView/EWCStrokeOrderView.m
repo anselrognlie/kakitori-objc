@@ -17,8 +17,6 @@
 
 #import "EWCGlyphLayer.h"
 
-IB_DESIGNABLE
-
 const NSInteger EWCStrokeOrderViewDisplayModeCount = EWCStrokeOrderViewDisplayModeAnimateWithLabels + 1;
 
 static const char kEWCStrokeEndKey[] = "strokeEnd";

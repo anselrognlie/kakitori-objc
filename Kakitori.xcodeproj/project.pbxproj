@@ -61,6 +61,7 @@
 		FD3B0B4C2427EAC8003AA2CB /* KakitoriUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B4B2427EAC8003AA2CB /* KakitoriUITests.m */; };
 		FD941111243E81050062FE95 /* EWCGlyphLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD941110243E81050062FE95 /* EWCGlyphLayer.m */; };
 		FD9411142444CD100062FE95 /* EWCDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9411132444CD100062FE95 /* EWCDrawViewController.m */; };
+		FD9411182444D44D0062FE95 /* EWCStrokeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9411172444D44D0062FE95 /* EWCStrokeInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,8 @@
 		FD941110243E81050062FE95 /* EWCGlyphLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCGlyphLayer.m; sourceTree = "<group>"; };
 		FD9411122444CD100062FE95 /* EWCDrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCDrawViewController.h; sourceTree = "<group>"; };
 		FD9411132444CD100062FE95 /* EWCDrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCDrawViewController.m; sourceTree = "<group>"; };
+		FD9411162444D44D0062FE95 /* EWCStrokeInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeInputView.h; sourceTree = "<group>"; };
+		FD9411172444D44D0062FE95 /* EWCStrokeInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeInputView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +380,7 @@
 		FD3B0B592427EC47003AA2CB /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				FD9411152444D3750062FE95 /* StrokeInputView */,
 				FD3B0B5A2427EC5F003AA2CB /* StrokeOrderView */,
 			);
 			path = Controls;
@@ -437,6 +441,15 @@
 				FD288C9A243BFDC5005FA176 /* EWCStrokeNumber.m */,
 			);
 			path = StrokeOrder;
+			sourceTree = "<group>";
+		};
+		FD9411152444D3750062FE95 /* StrokeInputView */ = {
+			isa = PBXGroup;
+			children = (
+				FD9411162444D44D0062FE95 /* EWCStrokeInputView.h */,
+				FD9411172444D44D0062FE95 /* EWCStrokeInputView.m */,
+			);
+			path = StrokeInputView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -634,6 +647,7 @@
 				FD9411142444CD100062FE95 /* EWCDrawViewController.m in Sources */,
 				FD288C8D2437D32C005FA176 /* EWCStrokeOrderView.m in Sources */,
 				FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */,
+				FD9411182444D44D0062FE95 /* EWCStrokeInputView.m in Sources */,
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
 				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
 				FD288C96243A75A2005FA176 /* EWCStrokeJoinStyleConverter.m in Sources */,
