@@ -62,6 +62,8 @@
 		FD941111243E81050062FE95 /* EWCGlyphLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FD941110243E81050062FE95 /* EWCGlyphLayer.m */; };
 		FD9411142444CD100062FE95 /* EWCDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9411132444CD100062FE95 /* EWCDrawViewController.m */; };
 		FD9411182444D44D0062FE95 /* EWCStrokeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9411172444D44D0062FE95 /* EWCStrokeInputView.m */; };
+		FD94111C244516FA0062FE95 /* EWCPathProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = FD94111B244516FA0062FE95 /* EWCPathProcessor.m */; };
+		FD94111F244543A60062FE95 /* EWCCurveFitter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD94111E244543A60062FE95 /* EWCCurveFitter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +189,10 @@
 		FD9411132444CD100062FE95 /* EWCDrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCDrawViewController.m; sourceTree = "<group>"; };
 		FD9411162444D44D0062FE95 /* EWCStrokeInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeInputView.h; sourceTree = "<group>"; };
 		FD9411172444D44D0062FE95 /* EWCStrokeInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeInputView.m; sourceTree = "<group>"; };
+		FD94111A244516FA0062FE95 /* EWCPathProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCPathProcessor.h; sourceTree = "<group>"; };
+		FD94111B244516FA0062FE95 /* EWCPathProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCPathProcessor.m; sourceTree = "<group>"; };
+		FD94111D244543A50062FE95 /* EWCCurveFitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCCurveFitter.h; sourceTree = "<group>"; };
+		FD94111E244543A60062FE95 /* EWCCurveFitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCCurveFitter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +307,7 @@
 		FD349DF1242E716A00A6C1C3 /* KakitoriLib */ = {
 			isa = PBXGroup;
 			children = (
+				FD941119244516470062FE95 /* Pathing */,
 				FD3B0BD2242A8659003AA2CB /* Status */,
 				FD3B0BD6242A8659003AA2CB /* StrokeOrder */,
 			);
@@ -450,6 +457,17 @@
 				FD9411172444D44D0062FE95 /* EWCStrokeInputView.m */,
 			);
 			path = StrokeInputView;
+			sourceTree = "<group>";
+		};
+		FD941119244516470062FE95 /* Pathing */ = {
+			isa = PBXGroup;
+			children = (
+				FD94111A244516FA0062FE95 /* EWCPathProcessor.h */,
+				FD94111B244516FA0062FE95 /* EWCPathProcessor.m */,
+				FD94111D244543A50062FE95 /* EWCCurveFitter.h */,
+				FD94111E244543A60062FE95 /* EWCCurveFitter.m */,
+			);
+			path = Pathing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,6 +642,7 @@
 				FD349E0C242E7A7000A6C1C3 /* EWCStroke.h in Sources */,
 				FD349E0D242E7A7000A6C1C3 /* EWCStroke.m in Sources */,
 				FD349E0E242E7A7000A6C1C3 /* EWCStrokeData.h in Sources */,
+				FD94111F244543A60062FE95 /* EWCCurveFitter.m in Sources */,
 				FD349E0F242E7A7000A6C1C3 /* EWCStrokeData.m in Sources */,
 				FD349E10242E7A7000A6C1C3 /* EWCStrokeData+Protected.h in Sources */,
 				FD349E11242E7A7000A6C1C3 /* EWCStrokeDataError.h in Sources */,
@@ -631,6 +650,7 @@
 				FD349E13242E7A7000A6C1C3 /* EWCStrokeDataParserDelegate.h in Sources */,
 				FD349E14242E7A7000A6C1C3 /* EWCStrokeDataParserDelegate.m in Sources */,
 				FD288C902437E139005FA176 /* EWCStrokeDataToBezierConvertor.m in Sources */,
+				FD94111C244516FA0062FE95 /* EWCPathProcessor.m in Sources */,
 				FD349E15242E7A7000A6C1C3 /* EWCStrokePart.h in Sources */,
 				FD349E16242E7A7000A6C1C3 /* EWCStrokePart.m in Sources */,
 				FD349E17242E7A7000A6C1C3 /* EWCStrokePartTokenizer.h in Sources */,

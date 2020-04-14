@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "EWCStrokeInputView.h"
+#import "EWCPathProcessor.h"
+#import "EWCCurveFitter.h"
 
 @interface EWCStrokeInputView ()
 
@@ -16,11 +18,23 @@
 
 typedef NSArray<NSValue *> EWCPoints;
 
+//static void dumpPoints(EWCPoints *points) {
+//  int numPoints = (int)points.count;
+//  for (int i = 0; i < numPoints; ++i) {
+//    CGPoint p = points[i].CGPointValue;
+//    NSLog(@"[%d]:(%g, %g)", i, p.x, p.y);
+//  }
+//}
+
 @implementation EWCStrokeInputView {
   NSMutableArray<NSValue *> *_currentPoints;
   NSMutableArray<EWCPoints *> *_curves;
   BOOL _touching;
   CAShapeLayer *_currentStrokeLayer;
+  CAShapeLayer *_curveLayer;
+  double _epsilon;
+  EWCPathProcessor *_pathProcessor;
+  EWCCurveFitter *_curveFitter;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
@@ -41,6 +55,18 @@ typedef NSArray<NSValue *> EWCPoints;
 
 - (void)initInternal {
   _touching = NO;
+  _epsilon = 5.0 / 400.0 * self.bounds.size.width;
+//  _epsilon = 1;
+  _pathProcessor = [EWCPathProcessor new];
+  _curveFitter = [EWCCurveFitter new];
+  _curves = [NSMutableArray<EWCPoints *> new];
+
+//  _currentPoints = [NSMutableArray<NSValue *> arrayWithObjects:
+//    [NSValue valueWithCGPoint:CGPointMake(100, 100)],
+//    [NSValue valueWithCGPoint:CGPointMake(200, 100)],
+//    [NSValue valueWithCGPoint:CGPointMake(200, 200)],
+//    nil];
+//  [self completeCurrentPoints];
 }
 
 -(CGPoint)simplifyTouches:(NSSet<UITouch *> *)touches {
@@ -71,7 +97,7 @@ typedef NSArray<NSValue *> EWCPoints;
   if (point.x < 0) { return; }
 
   [_currentPoints addObject:[NSValue valueWithCGPoint:point]];
-  [self startCurrentStrokeLayer];
+  [self resetCurrentStrokeLayer];
   [self drawCurrentPoints];
 }
 
@@ -90,19 +116,8 @@ typedef NSArray<NSValue *> EWCPoints;
   _touching = NO;
 }
 
-- (void)startCurrentStrokeLayer {
-  if (_currentStrokeLayer) {
-    [_currentStrokeLayer removeFromSuperlayer];
-  }
-
-  _currentStrokeLayer = [CAShapeLayer new];
-  _currentStrokeLayer.lineWidth = (3 / 109.0) * self.bounds.size.width;
-  _currentStrokeLayer.lineCap = kCALineCapRound;
-  _currentStrokeLayer.lineJoin = kCALineJoinRound;
-  _currentStrokeLayer.strokeColor = [UIColor blackColor].CGColor;
-  _currentStrokeLayer.fillColor = nil;
-
-  [self.layer addSublayer:_currentStrokeLayer];
+- (void)resetCurrentStrokeLayer {
+  _currentStrokeLayer = [self resetLayer:_currentStrokeLayer];
 }
 
 - (void)drawCurrentPoints {
@@ -125,7 +140,91 @@ typedef NSArray<NSValue *> EWCPoints;
 }
 
 - (void)completeCurrentPoints {
+//  NSLog(@"%@", @"Raw Points:");
+//  dumpPoints(_currentPoints);
+  NSArray<NSValue *> *simplifiedPoints =
+    [_pathProcessor douglasPeuckerSimplifyPoints:_currentPoints epsilon:_epsilon];
 
+//  NSLog(@"%@", @"Simplified Points:");
+//  dumpPoints(simplifiedPoints);
+  NSArray<NSValue *> *curvePoints =
+    [_curveFitter fitCurveToPoints:simplifiedPoints];
+
+  if (curvePoints) {
+//    NSLog(@"%@", @"Curve Points:");
+//    dumpPoints(curvePoints);
+//  NSLog(@"c:%ld", curvePoints.count);
+    [_curves addObject:curvePoints];
+  }
+
+  [self updateCurveLayer];
+  [self resetCurrentStrokeLayer];
+}
+
+- (void)updateCurveLayer {
+  [self resetCurveLayer];
+  [self drawCurves];
+}
+
+//- (void)addCurveToPath:(EWCPoints *)curve path:(UIBezierPath *)path {
+//  int numPoints = (int)curve.count;
+//
+//  CGPoint lastPoint = [curve[0] CGPointValue];
+//  [path moveToPoint:lastPoint];
+//
+//  for (int i = 1; i < numPoints; ++i) {
+//    NSValue *pointValue = curve[i];
+//    CGPoint p = [pointValue CGPointValue];
+//
+//    [path addLineToPoint:p];
+//  }
+//}
+
+- (void)addCurveToPath:(EWCPoints *)curve path:(UIBezierPath *)path {
+  int numPoints = (int)curve.count;
+
+  [path moveToPoint:curve[0].CGPointValue];
+
+  for (int i = 1; i < numPoints; i += 3) {
+    CGPoint cp0 = curve[i].CGPointValue;
+    CGPoint cp1 = curve[i + 1].CGPointValue;
+    CGPoint p1 = curve[i + 2].CGPointValue;
+
+    [path addCurveToPoint:p1 controlPoint1:cp0 controlPoint2:cp1];
+  }
+}
+
+- (void)drawCurves {
+  if (_curves.count == 0) { return; }
+
+  UIBezierPath *path = [UIBezierPath new];
+
+  for (EWCPoints *curve in _curves) {
+    if (curve.count < 1) { continue; }
+    [self addCurveToPath:curve path:path];
+  }
+
+  [_curveLayer setPath:path.CGPath];
+}
+
+- (void)resetCurveLayer {
+  _curveLayer = [self resetLayer:_curveLayer];
+}
+
+- (CAShapeLayer *)resetLayer:(CAShapeLayer *)layer {
+  if (layer) {
+    [layer removeFromSuperlayer];
+  }
+
+  layer = [CAShapeLayer new];
+  layer.lineWidth = (3 / 109.0) * self.bounds.size.width;
+  layer.lineCap = kCALineCapRound;
+  layer.lineJoin = kCALineJoinRound;
+  layer.strokeColor = [UIColor blackColor].CGColor;
+  layer.fillColor = nil;
+
+  [self.layer addSublayer:layer];
+  return layer;
 }
 
 /*
