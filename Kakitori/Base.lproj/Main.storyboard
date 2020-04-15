@@ -81,37 +81,73 @@
                                     <segue destination="u0m-ok-ZF4" kind="unwind" unwindAction="fromSegue:" id="vwW-Fk-GSv"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDt-4F-3Jv" customClass="EWCStrokeInputView">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDt-4F-3Jv" customClass="EWCStrokeInputView">
                                 <rect key="frame" x="16" y="304" width="343" height="343"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jDt-4F-3Jv" secondAttribute="height" id="ne8-Vw-n3I"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJ0-l0-27O">
+                                <rect key="frame" x="16" y="266" width="37" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" title="Undo"/>
+                                <connections>
+                                    <action selector="handleUndo:" destination="HLC-0p-R7B" eventType="touchUpInside" id="xJk-qY-YrG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67N-13-yqI">
+                                <rect key="frame" x="169.5" y="266" width="36" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="handleClear:" destination="HLC-0p-R7B" eventType="touchUpInside" id="crI-nj-SS2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jDt-4F-3Jv" firstAttribute="top" secondItem="tUF-7M-NJ5" secondAttribute="top" constant="20" id="0ty-e8-UBb"/>
+                            <constraint firstItem="jDt-4F-3Jv" firstAttribute="leading" secondItem="rJ0-l0-27O" secondAttribute="trailing" constant="20" id="3Ub-2P-KsM"/>
+                            <constraint firstItem="67N-13-yqI" firstAttribute="centerX" secondItem="MI1-Vh-7TJ" secondAttribute="centerX" id="FhS-Oa-ai8"/>
+                            <constraint firstItem="rJ0-l0-27O" firstAttribute="leading" secondItem="tUF-7M-NJ5" secondAttribute="leading" constant="16" id="Grz-Dd-mAx"/>
                             <constraint firstItem="tUF-7M-NJ5" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jmm-0K-ZHv" secondAttribute="trailing" constant="10" id="Jeu-Aj-f3o"/>
+                            <constraint firstItem="jDt-4F-3Jv" firstAttribute="leading" secondItem="67N-13-yqI" secondAttribute="trailing" constant="20" id="MsZ-eb-qsB"/>
                             <constraint firstItem="tUF-7M-NJ5" firstAttribute="bottom" secondItem="jDt-4F-3Jv" secondAttribute="bottom" constant="20" id="QUS-F0-ydt"/>
                             <constraint firstItem="tUF-7M-NJ5" firstAttribute="trailing" secondItem="jDt-4F-3Jv" secondAttribute="trailing" constant="16" id="WbY-yW-SMb"/>
+                            <constraint firstItem="67N-13-yqI" firstAttribute="centerY" secondItem="MI1-Vh-7TJ" secondAttribute="centerY" id="axn-1l-GVk"/>
                             <constraint firstItem="jmm-0K-ZHv" firstAttribute="top" secondItem="tUF-7M-NJ5" secondAttribute="top" constant="20" id="h0A-Fh-3We"/>
+                            <constraint firstItem="jDt-4F-3Jv" firstAttribute="top" secondItem="rJ0-l0-27O" secondAttribute="bottom" constant="8" id="lgv-BH-HlX"/>
                             <constraint firstItem="jDt-4F-3Jv" firstAttribute="leading" secondItem="tUF-7M-NJ5" secondAttribute="leading" constant="16" id="sLk-Vz-PMe"/>
+                            <constraint firstItem="tUF-7M-NJ5" firstAttribute="bottom" secondItem="rJ0-l0-27O" secondAttribute="bottom" constant="20" id="tvb-JR-q40"/>
+                            <constraint firstItem="jDt-4F-3Jv" firstAttribute="top" secondItem="67N-13-yqI" secondAttribute="bottom" constant="8" id="wIE-26-1Od"/>
                             <constraint firstItem="jmm-0K-ZHv" firstAttribute="leading" secondItem="tUF-7M-NJ5" secondAttribute="leading" constant="16" id="xr2-hu-hRl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tUF-7M-NJ5"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="tvb-JR-q40"/>
                                 <exclude reference="0ty-e8-UBb"/>
+                                <exclude reference="3Ub-2P-KsM"/>
+                                <exclude reference="MsZ-eb-qsB"/>
+                                <exclude reference="axn-1l-GVk"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="0xU-16-p1B"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="clearBottomTallMargin" destination="wIE-26-1Od" id="JxC-2Q-jlV"/>
+                        <outlet property="clearCenterTallMargin" destination="FhS-Oa-ai8" id="Kxr-bl-bhG"/>
+                        <outlet property="clearCenterWideMargin" destination="axn-1l-GVk" id="Ubi-mN-40P"/>
+                        <outlet property="clearRightMargin" destination="MsZ-eb-qsB" id="RYK-ZE-W1A"/>
                         <outlet property="leftMargin" destination="sLk-Vz-PMe" id="JCA-3A-CTx"/>
                         <outlet property="strokeView" destination="jDt-4F-3Jv" id="Tuc-4n-oqY"/>
                         <outlet property="topMargin" destination="0ty-e8-UBb" id="zss-eb-zkn"/>
+                        <outlet property="undoBottomTallMargin" destination="lgv-BH-HlX" id="zUY-Sp-d5L"/>
+                        <outlet property="undoBottomWideMargin" destination="tvb-JR-q40" id="ZjV-m6-Rw7"/>
+                        <outlet property="undoLeftMargin" destination="Grz-Dd-mAx" id="cUI-sf-Tpo"/>
+                        <outlet property="undoRightMargin" destination="3Ub-2P-KsM" id="k2d-nN-j6k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeR-a2-3VV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

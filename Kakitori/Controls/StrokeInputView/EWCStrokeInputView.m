@@ -60,6 +60,8 @@ typedef NSArray<NSValue *> EWCPoints;
   _pathProcessor = [EWCPathProcessor new];
   _curveFitter = [EWCCurveFitter new];
   _curves = [NSMutableArray<EWCPoints *> new];
+  self.layer.borderColor = [UIColor blackColor].CGColor;
+  self.layer.borderWidth = 1;
 
 //  _currentPoints = [NSMutableArray<NSValue *> arrayWithObjects:
 //    [NSValue valueWithCGPoint:CGPointMake(100, 100)],
@@ -166,20 +168,6 @@ typedef NSArray<NSValue *> EWCPoints;
   [self drawCurves];
 }
 
-//- (void)addCurveToPath:(EWCPoints *)curve path:(UIBezierPath *)path {
-//  int numPoints = (int)curve.count;
-//
-//  CGPoint lastPoint = [curve[0] CGPointValue];
-//  [path moveToPoint:lastPoint];
-//
-//  for (int i = 1; i < numPoints; ++i) {
-//    NSValue *pointValue = curve[i];
-//    CGPoint p = [pointValue CGPointValue];
-//
-//    [path addLineToPoint:p];
-//  }
-//}
-
 - (void)addCurveToPath:(EWCPoints *)curve path:(UIBezierPath *)path {
   int numPoints = (int)curve.count;
 
@@ -227,12 +215,16 @@ typedef NSArray<NSValue *> EWCPoints;
   return layer;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)undo {
+  if (_curves.count) {
+    [_curves removeLastObject];
+    [self updateCurveLayer];
+  }
 }
-*/
+
+- (void)clear {
+  _curves = [NSMutableArray<EWCPoints *> new];
+  [self resetCurveLayer];
+}
 
 @end

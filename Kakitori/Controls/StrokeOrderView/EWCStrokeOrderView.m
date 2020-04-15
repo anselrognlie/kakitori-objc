@@ -75,6 +75,8 @@ static const double kEWCTimeOffsetFromLabel = 0.5;
   _showGlyph = YES;
   _preferSerifs = YES;
   self.displayMode = EWCStrokeOrderViewDisplayModePlain;
+  self.layer.borderColor = [UIColor blackColor].CGColor;
+  self.layer.borderWidth = 1;
 }
 
 - (void)setDisplayMode:(EWCStrokeOrderViewDisplayMode)mode {
