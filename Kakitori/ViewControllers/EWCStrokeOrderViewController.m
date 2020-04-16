@@ -6,18 +6,18 @@
 //  Copyright © 2020 Ansel Rognlie. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "EWCStrokeOrderViewController.h"
 #import "EWCStrokeOrderView.h"
 #import "EWCStrokeDataParserDelegate.h"
 #import "EWCStrokeDataLoader.h"
 
-@interface ViewController ()
+@interface EWCStrokeOrderViewController ()
 @property (weak, nonatomic) IBOutlet EWCStrokeOrderView *strokeOrderView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomMargin;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightMargin;
 @end
 
-@implementation ViewController {
+@implementation EWCStrokeOrderViewController {
   EWCStrokeOrderViewDisplayMode _displayMode;
 }
 

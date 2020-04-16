@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface EWCStrokeOrderViewController : UIViewController
 
 - (IBAction) fromSegue:(UIStoryboardSegue*)unwindSegue;
 

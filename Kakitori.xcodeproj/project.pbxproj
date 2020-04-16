@@ -52,7 +52,7 @@
 		FD349E1F242E7CD600A6C1C3 /* EWCStatusWriterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD349E1E242E7CD600A6C1C3 /* EWCStatusWriterTests.m */; };
 		FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B252427EAC6003AA2CB /* AppDelegate.m */; };
 		FD3B0B292427EAC6003AA2CB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B282427EAC6003AA2CB /* SceneDelegate.m */; };
-		FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B2B2427EAC6003AA2CB /* ViewController.m */; };
+		FD3B0B2C2427EAC6003AA2CB /* EWCStrokeOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3B0B2B2427EAC6003AA2CB /* EWCStrokeOrderViewController.m */; };
 		FD3B0B2F2427EAC6003AA2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B0B2D2427EAC6003AA2CB /* Main.storyboard */; };
 		FD3B0B312427EAC8003AA2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD3B0B302427EAC8003AA2CB /* Assets.xcassets */; };
 		FD3B0B342427EAC8003AA2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B0B322427EAC8003AA2CB /* LaunchScreen.storyboard */; };
@@ -144,8 +144,8 @@
 		FD3B0B252427EAC6003AA2CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FD3B0B272427EAC6003AA2CB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		FD3B0B282427EAC6003AA2CB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		FD3B0B2A2427EAC6003AA2CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FD3B0B2B2427EAC6003AA2CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FD3B0B2A2427EAC6003AA2CB /* EWCStrokeOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EWCStrokeOrderViewController.h; sourceTree = "<group>"; };
+		FD3B0B2B2427EAC6003AA2CB /* EWCStrokeOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EWCStrokeOrderViewController.m; sourceTree = "<group>"; };
 		FD3B0B2E2427EAC6003AA2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD3B0B302427EAC8003AA2CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD3B0B332427EAC8003AA2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -450,8 +450,8 @@
 		FD5A51172448B596000F5BC5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD3B0B2A2427EAC6003AA2CB /* ViewController.h */,
-				FD3B0B2B2427EAC6003AA2CB /* ViewController.m */,
+				FD3B0B2A2427EAC6003AA2CB /* EWCStrokeOrderViewController.h */,
+				FD3B0B2B2427EAC6003AA2CB /* EWCStrokeOrderViewController.m */,
 				FD9411122444CD100062FE95 /* EWCDrawViewController.h */,
 				FD9411132444CD100062FE95 /* EWCDrawViewController.m */,
 			);
@@ -674,7 +674,7 @@
 			files = (
 				FD9411142444CD100062FE95 /* EWCDrawViewController.m in Sources */,
 				FD288C8D2437D32C005FA176 /* EWCStrokeOrderView.m in Sources */,
-				FD3B0B2C2427EAC6003AA2CB /* ViewController.m in Sources */,
+				FD3B0B2C2427EAC6003AA2CB /* EWCStrokeOrderViewController.m in Sources */,
 				FD9411182444D44D0062FE95 /* EWCStrokeInputView.m in Sources */,
 				FD3B0B262427EAC6003AA2CB /* AppDelegate.m in Sources */,
 				FD3B0B372427EAC8003AA2CB /* main.m in Sources */,
